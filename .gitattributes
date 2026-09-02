@@ -1,0 +1,19 @@
+# Normalize all text files to LF in the repository.
+# Git converts to the OS native line ending on checkout,
+# but the repo always stores LF — keeps diffs clean and
+# ensures Vercel (Linux) gets unambiguous line endings.
+* text=auto eol=lf
+
+# Treat binary assets as binary — never touch their bytes.
+*.ico    binary
+*.png    binary
+*.jpg    binary
+*.jpeg   binary
+*.gif    binary
+*.webp   binary
+*.avif   binary
+*.woff   binary
+*.woff2  binary
+*.ttf    binary
+*.otf    binary
+*.eot    binary
