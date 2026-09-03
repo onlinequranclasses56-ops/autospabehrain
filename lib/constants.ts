@@ -17,12 +17,12 @@ export const BUSINESS = {
   phone: {
     primary: '+97317595971',
     primaryDisplay: '+973 1759 5971',
-    whatsapp: '+97336606113',
-    whatsappDisplay: '+973 3360 6113',
+    whatsapp: '+97317595971',
+    whatsappDisplay: '+973 1759 5971',
   },
   whatsapp: {
-    number: '97336606113',
-    baseUrl: 'https://wa.me/97336606113',
+    number: '97317595971',
+    baseUrl: 'https://wa.me/97317595971',
   },
   geo: {
     lat: 26.1943,
@@ -94,7 +94,7 @@ export const FAQ_ITEMS = [
   {
     question: 'Do you offer vehicle pick-up and drop-off across Bahrain?',
     answer:
-      "Yes. We regularly collect and return vehicles for clients in Saar, Seef, Hamala, Riffa, A'ali, and Al Jasra. For locations further afield — Isa Town, Muharraq, Sanad, or Manama Center — we can arrange pick-up with advance booking. WhatsApp us on +973 3360 6113 to confirm availability for your area.",
+      "Yes. We regularly collect and return vehicles for clients in Saar, Seef, Hamala, Riffa, A'ali, and Al Jasra. For locations further afield — Isa Town, Muharraq, Sanad, or Manama Center — we can arrange pick-up with advance booking. WhatsApp us on +973 1759 5971 to confirm availability for your area.",
   },
   {
     question:

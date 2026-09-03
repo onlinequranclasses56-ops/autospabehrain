@@ -41,7 +41,7 @@ export const LOCATIONS_DATA: LocationData[] = [
     faqs: [
       {
         q: 'Can I walk in to AutoSpa Bahrain in Budaiya without an appointment?',
-        a: 'Yes. Walk-ins are welcome at our Budaiya workshop during business hours (Saturday–Thursday 9 AM–8 PM, Friday 2 PM–8 PM). For shorter services — interior steam clean, wash and polish, or a quick assessment — we can often accommodate you the same day. For ceramic coating, PPF, or a full showroom detail, we recommend booking at least 2–3 days ahead via WhatsApp on +973 3360 6113 to guarantee workshop bay availability.',
+        a: 'Yes. Walk-ins are welcome at our Budaiya workshop during business hours (Saturday–Thursday 9 AM–8 PM, Friday 2 PM–8 PM). For shorter services — interior steam clean, wash and polish, or a quick assessment — we can often accommodate you the same day. For ceramic coating, PPF, or a full showroom detail, we recommend booking at least 2–3 days ahead via WhatsApp on +973 1759 5971 to guarantee workshop bay availability.',
       },
       {
         q: 'Where exactly is AutoSpa Bahrain in Budaiya?',
@@ -77,7 +77,7 @@ export const LOCATIONS_DATA: LocationData[] = [
     faqs: [
       {
         q: 'Do you collect cars from Saar for detailing?',
-        a: 'Yes, Saar is one of our most frequent collection areas. Given the 5 km distance, we can typically arrange same-day or next-morning collection. WhatsApp us on +973 3360 6113 with your Saar address, vehicle details, and preferred date, and we will confirm a collection time. For ceramic coating, PPF, or full showroom details (which take 2–3 days), we collect on day one and return the vehicle on completion.',
+        a: 'Yes, Saar is one of our most frequent collection areas. Given the 5 km distance, we can typically arrange same-day or next-morning collection. WhatsApp us on +973 1759 5971 with your Saar address, vehicle details, and preferred date, and we will confirm a collection time. For ceramic coating, PPF, or full showroom details (which take 2–3 days), we collect on day one and return the vehicle on completion.',
       },
       {
         q: 'Which service is most popular with Saar residents?',
@@ -149,7 +149,7 @@ export const LOCATIONS_DATA: LocationData[] = [
     faqs: [
       {
         q: 'Do you charge extra for collecting from Riffa?',
-        a: 'We aim to keep collection charges competitive for Riffa given the 25 km distance. In most cases, we absorb the collection cost into the service price, particularly for ceramic coating, PPF, and full showroom detail bookings where the service value justifies it. For smaller services, a nominal collection fee may apply. We will confirm the total price — fully inclusive — before you commit to a booking. WhatsApp us on +973 3360 6113 with your location and service requirement.',
+        a: 'We aim to keep collection charges competitive for Riffa given the 25 km distance. In most cases, we absorb the collection cost into the service price, particularly for ceramic coating, PPF, and full showroom detail bookings where the service value justifies it. For smaller services, a nominal collection fee may apply. We will confirm the total price — fully inclusive — before you commit to a booking. WhatsApp us on +973 1759 5971 with your location and service requirement.',
       },
       {
         q: 'How long will my car be at the workshop if I am based in Riffa?',
@@ -204,7 +204,7 @@ export const LOCATIONS_DATA: LocationData[] = [
     area: 'Hamala',
     metaTitle: 'Car Detailing Hamala Bahrain | Ceramic Coating & PPF Near Hamala',
     metaDescription:
-      'AutoSpa Bahrain is just 8 km from Hamala. Ceramic coating, PPF & Zymöl detailing for European car owners in Hamala. Free collection. Book on WhatsApp +973 3360 6113.',
+      'AutoSpa Bahrain is just 8 km from Hamala. Ceramic coating, PPF & Zymöl detailing for European car owners in Hamala. Free collection. Book on WhatsApp +973 1759 5971.',
     intro:
       'Hamala is one of AutoSpa Bahrain\'s closest client communities outside Budaiya itself — just 8 km from our workshop via the Janabiya road. The village and its surrounding residential areas are home to a substantial expatriate community, many from Europe, who frequently bring their vehicles to us for services they recognise from back home: ceramic coating, PPF, and concours-grade Zymöl detailing. For Hamala residents, collection is straightforward and return is usually the same day or the following morning for most services.',
     distanceFromShop: '8 km from Hamala via Janabiya Road and Budaiya Highway',
