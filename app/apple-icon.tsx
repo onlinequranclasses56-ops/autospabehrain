@@ -1,64 +1,35 @@
 import { ImageResponse } from 'next/og'
+import { readFileSync } from 'fs'
+import { join } from 'path'
+import sharp from 'sharp'
 
-export const runtime = 'edge'
+export const runtime = 'nodejs'
 export const size = { width: 180, height: 180 }
 export const contentType = 'image/png'
 
-/*
-  180 × 180 Apple touch icon.
-  Next.js auto-wires this as <link rel="apple-touch-icon">.
-  iOS crops to a rounded square automatically — no need to pre-round here.
-*/
-export default function AppleIcon() {
+export default async function AppleIcon() {
+  const jpegBuf = await sharp(
+    readFileSync(join(process.cwd(), 'public', 'logo.webp'))
+  )
+    .resize(180, 180, { fit: 'cover', kernel: 'lanczos3', position: 'centre' })
+    .jpeg({ quality: 92 })
+    .toBuffer()
+
+  const src = `data:image/jpeg;base64,${jpegBuf.toString('base64')}`
+
   return new ImageResponse(
     (
       <div
         style={{
           width: 180,
           height: 180,
-          background: '#0B0C0E',
           borderRadius: 36,
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
-          border: '1.5px solid rgba(212,175,55,0.45)',
-          position: 'relative',
           overflow: 'hidden',
+          display: 'flex',
         }}
       >
-        {/* Background glow */}
-        <div
-          style={{
-            position: 'absolute',
-            width: 120,
-            height: 110,
-            background:
-              'radial-gradient(ellipse at center, rgba(212,175,55,0.14) 0%, transparent 70%)',
-            borderRadius: '50%',
-          }}
-        />
-
-        {/* Geometric "A" — scaled for 180 × 180 canvas */}
-        <svg width="100" height="110" viewBox="0 0 100 110" fill="none">
-          <path
-            d="M50 6 L4 102 M50 6 L96 102 M22 66 H78"
-            stroke="#D4AF37"
-            strokeWidth="8.5"
-            strokeLinecap="round"
-          />
-        </svg>
-
-        {/* Decorative gold rule below the mark */}
-        <div
-          style={{
-            marginTop: 10,
-            width: 56,
-            height: 1.5,
-            background:
-              'linear-gradient(90deg, transparent 0%, #D4AF37 40%, #D4AF37 60%, transparent 100%)',
-          }}
-        />
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={src} alt="" width={180} height={180} style={{ objectFit: 'cover' }} />
       </div>
     ),
     { ...size },

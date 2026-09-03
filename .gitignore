@@ -35,3 +35,11 @@ yarn-error.log*
 qa-*.mjs
 ss-*.png
 screenshot-*.png
+
+# ── Claude / AI tooling (local only) ──────────────────────────────────────────
+.claude/
+scripts/
+
+# ── Original images before WebP conversion ────────────────────────────────────
+public/*.jpg.jpeg
+public/*.jfif

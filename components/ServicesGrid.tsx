@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { Shield, Sparkles, Star, Sofa, Droplets, Crown } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 
@@ -61,15 +62,25 @@ export default function ServicesGrid() {
     <section
       id="services"
       aria-labelledby="services-heading"
-      className="relative bg-background px-4 py-20 sm:py-28"
+      className="relative overflow-hidden bg-background px-4 py-20 sm:py-28"
     >
-      {/* Subtle section divider glow */}
+      {/* Background image — matte black PPF, very dark overlay */}
+      <Image
+        src="/matte-black-ppf-paint-protection-autospa-maqaba.webp"
+        alt=""
+        fill
+        sizes="100vw"
+        quality={70}
+        className="object-cover object-center"
+      />
+      <div aria-hidden className="pointer-events-none absolute inset-0 bg-background/88" />
+      {/* Section divider glow */}
       <div
         aria-hidden
         className="pointer-events-none absolute left-1/2 top-0 h-px w-3/4 -translate-x-1/2 bg-gradient-to-r from-transparent via-accent-gold/30 to-transparent"
       />
 
-      <div className="mx-auto max-w-6xl">
+      <div className="relative z-10 mx-auto max-w-6xl">
         <div className="mb-14 text-center">
           <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-accent-gold">
             What We Do

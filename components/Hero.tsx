@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { motion, useReducedMotion } from 'framer-motion'
 import { ShieldCheck, MapPin, MessageCircle, Navigation } from 'lucide-react'
 import { BUSINESS, WHATSAPP } from '@/lib/constants'
@@ -31,15 +32,24 @@ export default function Hero() {
       aria-label="AutoSpa Bahrain — hero"
       className="relative flex min-h-[100svh] flex-col items-center justify-center overflow-hidden bg-background px-4 pb-28 pt-16 text-center sm:pt-24"
     >
-      {/* Background radial glow */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0 bg-hero-glow"
+      {/* Background hero image */}
+      <Image
+        src="/classic-mercedes-luxury-car-polishing-autospa-bahrain.webp"
+        alt=""
+        fill
+        priority
+        sizes="100vw"
+        quality={80}
+        className="object-cover object-center"
       />
-      {/* Subtle corner vignette */}
+      {/* Dark overlay — keeps text fully legible */}
+      <div aria-hidden className="pointer-events-none absolute inset-0 bg-background/78" />
+      {/* Gold radial glow on top */}
+      <div aria-hidden className="pointer-events-none absolute inset-0 bg-hero-glow" />
+      {/* Bottom vignette */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_rgba(11,12,14,0.8)_0%,_transparent_70%)]"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_rgba(11,12,14,0.85)_0%,_transparent_65%)]"
       />
 
       <motion.div
@@ -147,7 +157,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2, duration: 0.5 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+        className="absolute bottom-8 left-1/2 z-10 -translate-x-1/2"
       >
         <div className="flex h-8 w-5 items-start justify-center rounded-full border border-white/20 p-1">
           <motion.div

@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { useState, useMemo } from 'react'
 import { Car, ChevronDown, MessageCircle } from 'lucide-react'
 import { WHATSAPP, SERVICE_AREAS } from '@/lib/constants'
@@ -85,14 +86,24 @@ export default function ServiceEstimator() {
     <section
       id="estimator"
       aria-labelledby="estimator-heading"
-      className="relative bg-surface px-4 py-20 sm:py-28"
+      className="relative overflow-hidden bg-surface px-4 py-20 sm:py-28"
     >
+      {/* Background image — Lexus LX ceramic coating */}
+      <Image
+        src="/autospa-bahrain-ceramic-coating-lexus-lx-maqaba-budaiya.webp"
+        alt=""
+        fill
+        sizes="100vw"
+        quality={70}
+        className="object-cover object-center"
+      />
+      <div aria-hidden className="pointer-events-none absolute inset-0 bg-surface/90" />
       <div
         aria-hidden
         className="pointer-events-none absolute left-1/2 top-0 h-px w-3/4 -translate-x-1/2 bg-gradient-to-r from-transparent via-white/10 to-transparent"
       />
 
-      <div className="mx-auto max-w-3xl">
+      <div className="relative z-10 mx-auto max-w-3xl">
         {/* Header */}
         <div className="mb-10 text-center">
           <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-accent-gold">

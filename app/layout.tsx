@@ -76,8 +76,11 @@ export const metadata: Metadata = {
     3. Apple touch icon — from app/apple-icon.tsx, auto-linked by Next.js
   */
   icons: {
-    icon: [{ url: '/favicon.svg', type: 'image/svg+xml' }],
-    shortcut: '/favicon.svg',
+    icon: [
+      { url: '/favicon.ico', sizes: '16x16 32x32 48x48', type: 'image/x-icon' },
+      { url: '/icon', type: 'image/png', sizes: '32x32' },
+    ],
+    shortcut: '/favicon.ico',
     apple: [{ url: '/apple-icon', type: 'image/png', sizes: '180x180' }],
   },
 }

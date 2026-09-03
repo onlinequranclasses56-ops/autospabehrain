@@ -1,4 +1,5 @@
 import type { NextConfig } from 'next'
+import path from 'path'
 
 const securityHeaders = [
   // Prevent browsers from sniffing MIME types
@@ -18,26 +19,49 @@ const securityHeaders = [
 ]
 
 const nextConfig: NextConfig = {
+  outputFileTracingRoot: path.join(__dirname),
   images: {
+    // Serve AVIF first (best compression), fall back to WebP
     formats: ['image/avif', 'image/webp'],
+    // Viewport breakpoints Next.js uses to generate srcset variants
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920],
+    // Sizes used for fixed-dimension images (icons, thumbnails)
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    // Cache optimized images for 30 days on the CDN/server
+    minimumCacheTTL: 2592000,
   },
 
   async headers() {
     return [
       {
-        // Apply security headers to every route
         source: '/(.*)',
         headers: securityHeaders,
       },
       {
-        // SVG favicon: short max-age + long stale-while-revalidate
+        // Portfolio images — immutable content (hashed filenames in practice),
+        // cache for 1 year on CDN, browsers revalidate after 30 days
+        source: '/:path*.webp',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=2592000, stale-while-revalidate=31536000',
+          },
+        ],
+      },
+      {
         source: '/favicon.svg',
         headers: [
           { key: 'Cache-Control', value: 'public, max-age=86400, stale-while-revalidate=604800' },
         ],
       },
       {
-        // Webmanifest: allow browsers to cache it for a day
+        // Short TTL on .ico so browsers pick up regenerated versions quickly
+        source: '/favicon.ico',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=3600, stale-while-revalidate=86400' },
+        ],
+      },
+      {
         source: '/manifest.webmanifest',
         headers: [
           { key: 'Cache-Control', value: 'public, max-age=86400' },

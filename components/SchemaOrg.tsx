@@ -1,5 +1,56 @@
 import { BUSINESS, SERVICE_AREAS, FAQ_ITEMS } from '@/lib/constants'
 
+const PORTFOLIO_IMAGES = [
+  {
+    '@type': 'ImageObject' as const,
+    url: 'https://autospabahrain.com/autospa-bahrain-car-detailing-lexus-es-maqaba-budaiya.webp',
+    name: 'Lexus ES full car detailing at AutoSpa Bahrain, Maqaba Budaiya',
+    description: 'Professional car detailing service performed on a Lexus ES at AutoSpa Bahrain workshop in Maqaba, Budaiya, Bahrain.',
+  },
+  {
+    '@type': 'ImageObject' as const,
+    url: 'https://autospabahrain.com/autospa-bahrain-ceramic-coating-lexus-lx-maqaba-budaiya.webp',
+    name: 'Lexus LX ceramic coating at AutoSpa Bahrain, Budaiya',
+    description: '9H ceramic coating application on a Lexus LX at AutoSpa Bahrain, Budaiya, Kingdom of Bahrain.',
+  },
+  {
+    '@type': 'ImageObject' as const,
+    url: 'https://autospabahrain.com/autospa-bahrain-luxury-car-valeting-bentley-continental-maqaba-budaiya.webp',
+    name: 'Bentley Continental luxury valeting at AutoSpa Bahrain, Maqaba',
+    description: 'Luxury car valeting and detailing on a Bentley Continental GT at AutoSpa Bahrain, Maqaba, Budaiya.',
+  },
+  {
+    '@type': 'ImageObject' as const,
+    url: 'https://autospabahrain.com/autospa-bahrain-paint-protection-film-ppf-land-cruiser-defender-maqaba.webp',
+    name: 'Paint protection film PPF on Land Cruiser and Defender at AutoSpa Bahrain',
+    description: 'Paint protection film (PPF) installation on Toyota Land Cruiser and Land Rover Defender at AutoSpa Bahrain, Maqaba.',
+  },
+  {
+    '@type': 'ImageObject' as const,
+    url: 'https://autospabahrain.com/classic-mercedes-luxury-car-polishing-autospa-bahrain.webp',
+    name: 'Classic Mercedes machine polish at AutoSpa Bahrain, Budaiya',
+    description: 'Classic Mercedes machine polish and paint correction service at AutoSpa Bahrain, Budaiya, Bahrain.',
+  },
+  {
+    '@type': 'ImageObject' as const,
+    url: 'https://autospabahrain.com/genesis-gv70-ceramic-coating-autospa-bahrain-budaiya.webp',
+    name: 'Genesis GV70 ceramic coating at AutoSpa Bahrain, Budaiya',
+    description: 'Ceramic coating treatment on a Genesis GV70 at AutoSpa Bahrain, Budaiya, Kingdom of Bahrain.',
+  },
+  {
+    '@type': 'ImageObject' as const,
+    url: 'https://autospabahrain.com/matte-black-ppf-paint-protection-autospa-maqaba.webp',
+    name: 'Matte black paint protection film at AutoSpa Bahrain, Maqaba',
+    description: 'Matte black paint protection film (PPF) installation at AutoSpa Bahrain, Maqaba, Budaiya.',
+  },
+  {
+    '@type': 'ImageObject' as const,
+    url: 'https://autospabahrain.com/sports-coupe-paint-correction-interior-detailing-budaiya.webp',
+    name: 'Sports coupe paint correction and interior detailing at AutoSpa Bahrain, Budaiya',
+    description: 'Paint correction and interior detailing service on a sports coupe at AutoSpa Bahrain, Budaiya, Bahrain.',
+  },
+]
+
 export default function SchemaOrg() {
   const automotiveBusiness = {
     '@context': 'https://schema.org',
@@ -9,6 +60,7 @@ export default function SchemaOrg() {
     description: BUSINESS.description,
     url: BUSINESS.url,
     telephone: BUSINESS.phone.primary,
+    image: PORTFOLIO_IMAGES,
     address: {
       '@type': 'PostalAddress',
       streetAddress: BUSINESS.address.street,

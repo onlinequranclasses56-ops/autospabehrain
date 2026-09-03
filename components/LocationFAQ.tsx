@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { useState } from 'react'
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 import { Plus, X } from 'lucide-react'
@@ -17,14 +18,24 @@ export default function LocationFAQ() {
     <section
       id="faq"
       aria-labelledby="faq-heading"
-      className="relative bg-background px-4 py-20 sm:py-28"
+      className="relative overflow-hidden bg-background px-4 py-20 sm:py-28"
     >
+      {/* Background image — sports coupe detail */}
+      <Image
+        src="/sports-coupe-paint-correction-interior-detailing-budaiya.webp"
+        alt=""
+        fill
+        sizes="100vw"
+        quality={70}
+        className="object-cover object-[center_30%]"
+      />
+      <div aria-hidden className="pointer-events-none absolute inset-0 bg-background/87" />
       <div
         aria-hidden
         className="pointer-events-none absolute left-1/2 top-0 h-px w-3/4 -translate-x-1/2 bg-gradient-to-r from-transparent via-accent-gold/20 to-transparent"
       />
 
-      <div className="mx-auto max-w-3xl">
+      <div className="relative z-10 mx-auto max-w-3xl">
         {/* Header */}
         <div className="mb-12 text-center">
           <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-accent-gold">
