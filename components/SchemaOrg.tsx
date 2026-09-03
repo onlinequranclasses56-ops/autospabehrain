@@ -11,7 +11,7 @@ const PORTFOLIO_IMAGES = [
     '@type': 'ImageObject' as const,
     url: 'https://autospabahrain.com/autospa-bahrain-ceramic-coating-lexus-lx-maqaba-budaiya.webp',
     name: 'Lexus LX ceramic coating at AutoSpa Bahrain, Budaiya',
-    description: '9H ceramic coating application on a Lexus LX at AutoSpa Bahrain, Budaiya, Kingdom of Bahrain.',
+    description: '9H ceramic coating application on a Lexus LX at AutoSpa Bahrain, Budaiya, Bahrain.',
   },
   {
     '@type': 'ImageObject' as const,
@@ -35,7 +35,7 @@ const PORTFOLIO_IMAGES = [
     '@type': 'ImageObject' as const,
     url: 'https://autospabahrain.com/genesis-gv70-ceramic-coating-autospa-bahrain-budaiya.webp',
     name: 'Genesis GV70 ceramic coating at AutoSpa Bahrain, Budaiya',
-    description: 'Ceramic coating treatment on a Genesis GV70 at AutoSpa Bahrain, Budaiya, Kingdom of Bahrain.',
+    description: 'Ceramic coating treatment on a Genesis GV70 at AutoSpa Bahrain, Budaiya, Bahrain.',
   },
   {
     '@type': 'ImageObject' as const,
@@ -65,6 +65,7 @@ export default function SchemaOrg() {
       '@type': 'PostalAddress',
       streetAddress: BUSINESS.address.street,
       addressLocality: BUSINESS.address.locality,
+      postalCode: BUSINESS.address.postalCode,
       addressRegion: BUSINESS.address.region,
       addressCountry: BUSINESS.address.country,
     },

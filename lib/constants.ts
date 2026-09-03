@@ -4,12 +4,13 @@ export const BUSINESS = {
   description:
     "Bahrain's premier automotive detailing studio specialising in ceramic coating, paint protection film (PPF), and Zymöl luxury detailing, serving Budaiya, Saar, Seef, Riffa, Hamala, and all of Bahrain.",
   address: {
-    street: 'Building 18, Road 54, Block 505, Budaiya',
+    street: 'Building 18, Road 54, Budaiya 505',
     locality: 'Budaiya',
     region: 'Northern Governorate',
     country: 'BH',
-    countryName: 'Kingdom of Bahrain',
-    formatted: 'Building 18, Road 54, Block 505, Budaiya, Kingdom of Bahrain',
+    countryName: 'Bahrain',
+    postalCode: '505',
+    formatted: 'Building 18, Road 54, Budaiya 505, Bahrain',
     landmarks:
       'Off Budaiya Highway, near Saar Roundabout & Janusan Roundabout, behind the Harley-Davidson showroom',
   },
@@ -88,7 +89,7 @@ export const FAQ_ITEMS = [
   {
     question: 'Where exactly is AutoSpa Bahrain located in Budaiya?',
     answer:
-      'AutoSpa Bahrain is at Building 18, Road 54, Block 505, Budaiya — off Budaiya Highway, near the Saar Roundabout and Janusan Roundabout, directly behind the Harley-Davidson showroom. From Saar Roundabout, head west on Budaiya Highway, pass the Harley-Davidson dealership on your right, and turn into the service road immediately after it. We are the first workshop complex on that road.',
+      'AutoSpa Bahrain is at Building 18, Road 54, Budaiya 505, Bahrain — off Budaiya Highway, near the Saar Roundabout and Janusan Roundabout, directly behind the Harley-Davidson showroom. From Saar Roundabout, head west on Budaiya Highway, pass the Harley-Davidson dealership on your right, and turn into the service road immediately after it. We are the first workshop complex on that road.',
   },
   {
     question: 'Do you offer vehicle pick-up and drop-off across Bahrain?',
