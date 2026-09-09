@@ -5,22 +5,22 @@ import { MessageCircle, Phone, MapPin, Clock, ShieldCheck } from 'lucide-react'
 
 // ── Topical map: every service as a crawlable pillar page link ────────────────
 const SERVICE_LINKS = [
-  { label: 'Paint Protection Film (PPF) Bahrain', href: '/services/paint-protection-film-bahrain' },
-  { label: '9H Ceramic Coating Bahrain', href: '/services/ceramic-coating-bahrain' },
-  { label: 'Zymöl Luxury Car Detailing', href: '/services/zymol-luxury-detailing-bahrain' },
-  { label: 'Interior Steam Clean & Leather Care', href: '/services/interior-detailing-bahrain' },
-  { label: 'Full Showroom Detail Bahrain', href: '/services/full-showroom-detail-bahrain' },
-  { label: 'Paint Correction Bahrain', href: '/services/paint-correction-bahrain' },
+  { label: 'Paint Protection Film (PPF) Bahrain', href: '/paint-protection-film-bahrain' },
+  { label: '9H Ceramic Coating Bahrain', href: '/ceramic-coating-bahrain' },
+  { label: 'Zymöl Luxury Car Detailing', href: '/zymol-luxury-detailing-bahrain' },
+  { label: 'Interior Steam Clean & Leather Care', href: '/interior-detailing-bahrain' },
+  { label: 'Full Showroom Detail Bahrain', href: '/full-showroom-detail-bahrain' },
+  { label: 'Paint Correction Bahrain', href: '/paint-correction-bahrain' },
 ] as const
 
 // ── Geo-targeting: every service area as a crawlable location page link ───────
 const AREA_LINKS = [
-  { label: 'Car Detailing Budaiya', href: '/locations/car-detailing-budaiya' },
-  { label: 'Car Detailing Saar', href: '/locations/car-detailing-saar' },
-  { label: 'Car Detailing Seef', href: '/locations/car-detailing-seef' },
-  { label: 'Car Detailing Riffa', href: '/locations/car-detailing-riffa' },
-  { label: 'Car Detailing Manama', href: '/locations/car-detailing-manama' },
-  { label: 'Car Detailing Hamala', href: '/locations/car-detailing-hamala' },
+  { label: 'Car Detailing Budaiya', href: '/car-detailing-budaiya' },
+  { label: 'Car Detailing Saar', href: '/car-detailing-saar' },
+  { label: 'Car Detailing Seef', href: '/car-detailing-seef' },
+  { label: 'Car Detailing Riffa', href: '/car-detailing-riffa' },
+  { label: 'Car Detailing Manama', href: '/car-detailing-manama' },
+  { label: 'Car Detailing Hamala', href: '/car-detailing-hamala' },
 ] as const
 
 // ── Site architecture: key sections for crawl depth + UX ─────────────────────

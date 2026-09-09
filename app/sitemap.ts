@@ -23,14 +23,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ]
 
   const servicePages: MetadataRoute.Sitemap = SERVICES_DATA.map((service) => ({
-    url: `${base}/services/${service.slug}`,
+    url: `${base}/${service.slug}`,
     lastModified: now,
     changeFrequency: 'monthly',
     priority: 0.9,
   }))
 
   const locationPages: MetadataRoute.Sitemap = LOCATIONS_DATA.map((location) => ({
-    url: `${base}/locations/${location.slug}`,
+    url: `${base}/${location.slug}`,
     lastModified: now,
     changeFrequency: 'monthly',
     priority: 0.8,
