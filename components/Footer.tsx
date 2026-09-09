@@ -75,11 +75,15 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2 text-xs text-zinc-500">
                 <ShieldCheck className="h-3.5 w-3.5 shrink-0 text-accent-gold" aria-hidden />
-                <span>Premium PPF Installation Centre</span>
+                <span>Premium PPF &amp; Ceramic Coating Centre</span>
               </li>
               <li className="flex items-center gap-2 text-xs text-zinc-500">
                 <ShieldCheck className="h-3.5 w-3.5 shrink-0 text-accent-gold" aria-hidden />
-                <span>Est. 2010 — Over 10 Years in Bahrain</span>
+                <span>Est. 2010 — {new Date().getFullYear() - 2010}+ Years in Bahrain</span>
+              </li>
+              <li className="flex items-center gap-2 text-xs text-zinc-500">
+                <ShieldCheck className="h-3.5 w-3.5 shrink-0 text-accent-gold" aria-hidden />
+                <span>Registered in Bahrain · W.L.L. (CR No. Bahrain)</span>
               </li>
             </ul>
           </div>

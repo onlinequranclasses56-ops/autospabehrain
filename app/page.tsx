@@ -2,6 +2,7 @@ import Hero from '@/components/Hero'
 import Header from '@/components/Header'
 import ServicesGrid from '@/components/ServicesGrid'
 import PortfolioGallery from '@/components/PortfolioGallery'
+import EeatSection from '@/components/EeatSection'
 import ServiceEstimator from '@/components/ServiceEstimator'
 import LocationFAQ from '@/components/LocationFAQ'
 import Footer from '@/components/Footer'
@@ -16,6 +17,7 @@ export default function HomePage() {
         <Hero />
         <ServicesGrid />
         <PortfolioGallery />
+        <EeatSection />
         <ServiceEstimator />
         <LocationFAQ />
         <MapSection />
@@ -49,7 +51,7 @@ function MapSection() {
         </h2>
         <div className="overflow-hidden rounded-2xl border border-white/10">
           <iframe
-            title="AutoSpa Bahrain workshop location — Building 18, Road 54, Block 505, Budaiya"
+            title={`AutoSpa Bahrain workshop location — ${BUSINESS.address.formatted}`}
             src={BUSINESS.mapEmbed}
             width="100%"
             height="400"

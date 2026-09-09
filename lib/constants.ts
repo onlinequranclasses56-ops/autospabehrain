@@ -43,9 +43,9 @@ export const BUSINESS = {
     },
   ],
   openingHoursDisplay: 'Sat–Thu: 9 AM – 8 PM  |  Fri: 2 PM – 8 PM',
-  url: 'https://autospabahrain.com',
+  url: 'https://autospabahrainwll.com',
   mapDirections:
-    'https://www.google.com/maps/dir/?api=1&destination=Building+18+Road+54+Block+505+Budaiya+Bahrain',
+    'https://www.google.com/maps/dir/?api=1&destination=Building+18+Road+54+Budaiya+505+Bahrain',
   mapEmbed:
     'https://maps.google.com/maps?q=AutoSpa+Bahrain+Budaiya+Bahrain&output=embed&z=16',
   zymolAuthorized: true,

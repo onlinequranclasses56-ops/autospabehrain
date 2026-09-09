@@ -1,8 +1,9 @@
 'use client'
 
+import Link from 'next/link'
 import Image from 'next/image'
 import { motion, useReducedMotion } from 'framer-motion'
-import { ShieldCheck, MapPin, MessageCircle, Navigation } from 'lucide-react'
+import { ShieldCheck, MapPin, MessageCircle, Phone, CalendarCheck } from 'lucide-react'
 import { BUSINESS, WHATSAPP } from '@/lib/constants'
 
 const container = {
@@ -96,23 +97,28 @@ export default function Hero() {
           {...childProps}
           className="mb-12 flex flex-col items-center gap-3 sm:flex-row sm:justify-center"
         >
+          <Link
+            href="/book"
+            className="inline-flex min-h-[52px] items-center gap-2.5 rounded-xl bg-accent-gold px-7 py-3.5 text-sm font-bold tracking-wide text-black shadow-lg shadow-accent-gold/20 transition-all duration-200 hover:bg-accent-gold-light hover:shadow-accent-gold/35 focus-visible:ring-2 focus-visible:ring-accent-gold focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+          >
+            <CalendarCheck className="h-5 w-5" aria-hidden />
+            Book Now
+          </Link>
           <a
             href={WHATSAPP.general()}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex min-h-[52px] items-center gap-2.5 rounded-xl bg-accent-gold px-7 py-3.5 text-sm font-bold tracking-wide text-black shadow-lg shadow-accent-gold/20 transition-all duration-200 hover:bg-accent-gold-light hover:shadow-accent-gold/35 focus-visible:ring-2 focus-visible:ring-accent-gold focus-visible:ring-offset-2 focus-visible:ring-offset-background"
-          >
-            <MessageCircle className="h-5 w-5" aria-hidden />
-            Book via WhatsApp
-          </a>
-          <a
-            href={BUSINESS.mapDirections}
-            target="_blank"
-            rel="noopener noreferrer"
             className="inline-flex min-h-[52px] items-center gap-2.5 rounded-xl border border-white/20 bg-white/5 px-7 py-3.5 text-sm font-semibold tracking-wide text-white backdrop-blur-sm transition-all duration-200 hover:border-white/35 hover:bg-white/10 focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
           >
-            <Navigation className="h-5 w-5" aria-hidden />
-            Get Directions
+            <MessageCircle className="h-5 w-5" aria-hidden />
+            WhatsApp
+          </a>
+          <a
+            href={`tel:${BUSINESS.phone.primary}`}
+            className="inline-flex min-h-[52px] items-center gap-2.5 rounded-xl border border-white/20 bg-white/5 px-7 py-3.5 text-sm font-semibold tracking-wide text-white backdrop-blur-sm transition-all duration-200 hover:border-white/35 hover:bg-white/10 focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+          >
+            <Phone className="h-5 w-5" aria-hidden />
+            {BUSINESS.phone.primaryDisplay}
           </a>
         </motion.div>
 

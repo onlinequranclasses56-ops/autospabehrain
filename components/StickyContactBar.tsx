@@ -1,6 +1,7 @@
 'use client'
 
-import { Phone, MessageCircle, Navigation } from 'lucide-react'
+import Link from 'next/link'
+import { Phone, MessageCircle, CalendarCheck } from 'lucide-react'
 import { BUSINESS, WHATSAPP } from '@/lib/constants'
 
 export default function StickyContactBar() {
@@ -28,7 +29,6 @@ export default function StickyContactBar() {
           className="relative flex flex-1 flex-col items-center justify-center gap-1 py-3 text-accent-gold transition-colors duration-150 hover:text-accent-gold-light"
           aria-label="Chat on WhatsApp to book a service"
         >
-          {/* Pulsing online indicator */}
           <span
             aria-hidden
             className="absolute right-[calc(50%-10px)] top-3 h-2 w-2 translate-x-4 rounded-full bg-green-400 ring-2 ring-black animate-pulse-slow"
@@ -37,18 +37,14 @@ export default function StickyContactBar() {
           <span className="text-[10px] font-bold uppercase tracking-wider">WhatsApp</span>
         </a>
 
-        <a
-          href={BUSINESS.mapDirections}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex flex-1 flex-col items-center justify-center gap-1 py-3 text-zinc-300 transition-colors duration-150 hover:text-white focus-visible:bg-white/5"
-          aria-label="Get directions to AutoSpa Bahrain in Budaiya"
+        <Link
+          href="/book"
+          className="flex flex-1 flex-col items-center justify-center gap-1 py-3 text-zinc-300 transition-colors duration-150 hover:text-accent-gold focus-visible:bg-white/5"
+          aria-label="Book a detailing appointment online"
         >
-          <Navigation className="h-5 w-5" aria-hidden />
-          <span className="text-[10px] font-semibold uppercase tracking-wider">
-            Directions
-          </span>
-        </a>
+          <CalendarCheck className="h-5 w-5" aria-hidden />
+          <span className="text-[10px] font-semibold uppercase tracking-wider">Book Now</span>
+        </Link>
       </div>
     </div>
   )

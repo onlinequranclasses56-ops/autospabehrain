@@ -1,8 +1,8 @@
 import { notFound } from 'next/navigation'
 import Image from 'next/image'
-import Link from 'next/link'
 import type { Metadata } from 'next'
-import { MessageCircle, CheckCircle2, Clock, ArrowRight } from 'lucide-react'
+import { MessageCircle, CheckCircle2, Clock, ArrowRight, Phone, CalendarCheck } from 'lucide-react'
+import Link from 'next/link'
 
 import { SERVICES_DATA } from '@/lib/services-data'
 import { BUSINESS, WHATSAPP } from '@/lib/constants'
@@ -71,17 +71,18 @@ export default async function ServicePage({
       name: BUSINESS.name,
       address: {
         '@type': 'PostalAddress',
-        streetAddress: 'Building 18, Road 54, Block 505',
-        addressLocality: 'Budaiya',
-        addressRegion: 'Northern Governorate',
-        addressCountry: 'BH',
+        streetAddress: BUSINESS.address.street,
+        addressLocality: BUSINESS.address.locality,
+        addressRegion: BUSINESS.address.region,
+        postalCode: BUSINESS.address.postalCode,
+        addressCountry: BUSINESS.address.country,
       },
       telephone: BUSINESS.phone.primary,
       url: BUSINESS.url,
     },
     areaServed: {
       '@type': 'Country',
-      name: 'Kingdom of Bahrain',
+      name: BUSINESS.address.countryName,
     },
     offers: service.pricing.map((p) => ({
       '@type': 'Offer',
@@ -216,15 +217,31 @@ export default async function ServicePage({
                 ))}
               </div>
 
-              <a
-                href={whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-xl bg-accent-gold px-6 py-3 text-sm font-bold text-black transition-all duration-150 hover:bg-accent-gold-light active:scale-95"
-              >
-                <MessageCircle className="h-4 w-4" aria-hidden />
-                Book on WhatsApp
-              </a>
+              <div className="flex flex-col items-start gap-3 sm:flex-row sm:flex-wrap">
+                <Link
+                  href="/book"
+                  className="inline-flex items-center gap-2 rounded-xl bg-accent-gold px-6 py-3 text-sm font-bold text-black transition-all duration-150 hover:bg-accent-gold-light active:scale-95"
+                >
+                  <CalendarCheck className="h-4 w-4" aria-hidden />
+                  Book Now
+                </Link>
+                <a
+                  href={whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-xl border border-white/25 bg-white/8 px-6 py-3 text-sm font-semibold text-white backdrop-blur-sm transition-all duration-150 hover:border-white/40 hover:bg-white/12 active:scale-95"
+                >
+                  <MessageCircle className="h-4 w-4" aria-hidden />
+                  WhatsApp
+                </a>
+                <a
+                  href={`tel:${BUSINESS.phone.primary}`}
+                  className="inline-flex items-center gap-2 rounded-xl border border-white/25 bg-white/8 px-6 py-3 text-sm font-semibold text-white backdrop-blur-sm transition-all duration-150 hover:border-white/40 hover:bg-white/12 active:scale-95"
+                >
+                  <Phone className="h-4 w-4" aria-hidden />
+                  {BUSINESS.phone.primaryDisplay}
+                </a>
+              </div>
             </div>
           </div>
         </section>
@@ -500,20 +517,28 @@ export default async function ServicePage({
               <p className="mx-auto mb-8 max-w-md text-zinc-400">
                 Send us your vehicle details and we will confirm availability, provide an exact quote, and arrange collection from anywhere in Bahrain.
               </p>
-              <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+              <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center sm:flex-wrap">
+                <Link
+                  href="/book"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-accent-gold px-8 py-3.5 font-bold text-black transition-all duration-150 hover:bg-accent-gold-light active:scale-95 sm:w-auto"
+                >
+                  <CalendarCheck className="h-5 w-5" aria-hidden />
+                  Book Now
+                </Link>
                 <a
                   href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-accent-gold px-8 py-3.5 font-bold text-black transition-all duration-150 hover:bg-accent-gold-light active:scale-95 sm:w-auto"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-white/15 px-8 py-3.5 text-sm font-semibold text-white transition-all duration-150 hover:border-white/30 hover:bg-white/5 sm:w-auto"
                 >
                   <MessageCircle className="h-5 w-5" aria-hidden />
-                  Book This Service on WhatsApp
+                  WhatsApp
                 </a>
                 <a
                   href={`tel:${BUSINESS.phone.primary}`}
                   className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-white/15 px-8 py-3.5 text-sm font-semibold text-white transition-all duration-150 hover:border-white/30 hover:bg-white/5 sm:w-auto"
                 >
+                  <Phone className="h-5 w-5" aria-hidden />
                   Call {BUSINESS.phone.primaryDisplay}
                 </a>
               </div>

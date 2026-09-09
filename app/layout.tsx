@@ -24,6 +24,7 @@ const META_DESCRIPTION =
 export const metadata: Metadata = {
   title: META_TITLE,
   description: META_DESCRIPTION,
+  applicationName: BUSINESS.name,
   keywords: [
     'ceramic coating Bahrain',
     'PPF Budaiya',
@@ -37,8 +38,19 @@ export const metadata: Metadata = {
     'PPF Saar Bahrain',
     'car spa Budaiya',
     'automotive detailing Manama',
+    'car detailing Budaiya',
+    'ceramic coating Budaiya',
+    'auto spa Bahrain',
+    'paint correction Bahrain',
+    'interior detailing Bahrain',
+    'car wrap Bahrain',
+    'autospabahrain',
+    'autospabahrainwll',
   ],
-  authors: [{ name: BUSINESS.legalName }],
+  authors: [{ name: BUSINESS.legalName, url: BUSINESS.url }],
+  creator: BUSINESS.legalName,
+  publisher: BUSINESS.legalName,
+  category: 'automotive',
   openGraph: {
     title: 'AutoSpa Bahrain | Premium Automotive Detailing',
     description: META_DESCRIPTION,
@@ -46,11 +58,20 @@ export const metadata: Metadata = {
     siteName: BUSINESS.name,
     locale: 'en_BH',
     type: 'website',
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: 'AutoSpa Bahrain — Ceramic Coating, PPF & Luxury Detailing in Budaiya, Bahrain',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'AutoSpa Bahrain | Premium Automotive Detailing',
     description: META_DESCRIPTION,
+    images: ['/opengraph-image'],
   },
   alternates: {
     canonical: BUSINESS.url,
@@ -58,23 +79,21 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
-    googleBot: { index: true, follow: true },
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-snippet': -1,
+      'max-image-preview': 'large',
+      'max-video-preview': -1,
+    },
   },
-  /*
-    Priority: NEXT_PUBLIC_SITE_URL env var (set in Vercel dashboard for the custom domain)
-    → VERCEL_URL (auto-injected by Vercel on every deploy, covers preview URLs)
-    → BUSINESS.url (local dev / CI fallback)
-  */
+  verification: {
+    google: 'iKDkg5Vj_oMknljKxhbxDCsDynH5cLqMJKZk2bP51FE',
+  },
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL ??
     (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : BUSINESS.url)
   ),
-  /*
-    Icon cascade (browser picks best match):
-    1. SVG — modern Chrome, Firefox, Edge, Safari 14+ (adaptive dark/light via CSS media query)
-    2. 32 × 32 PNG — from app/icon.tsx, auto-linked by Next.js (older browsers)
-    3. Apple touch icon — from app/apple-icon.tsx, auto-linked by Next.js
-  */
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: '16x16 32x32 48x48', type: 'image/x-icon' },
