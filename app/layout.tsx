@@ -89,6 +89,9 @@ export const metadata: Metadata = {
   },
   verification: {
     google: 'iKDkg5Vj_oMknljKxhbxDCsDynH5cLqMJKZk2bP51FE',
+    other: {
+      'indexnow-verification': 'a9f3c2e8b5d71650e2c4f8a3b7d9e1c4',
+    },
   },
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL ??

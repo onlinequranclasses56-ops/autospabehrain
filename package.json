@@ -5,8 +5,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "node scripts/submit-indexnow.mjs",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "index:now": "node scripts/submit-indexnow.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.114.0",
