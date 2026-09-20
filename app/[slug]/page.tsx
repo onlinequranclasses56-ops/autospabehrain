@@ -15,6 +15,7 @@ import {
 
 import { SERVICES_DATA } from '@/lib/services-data'
 import { LOCATIONS_DATA } from '@/lib/locations-data'
+import { LOCATION_SERVICES_DATA } from '@/lib/location-services-data'
 import { BUSINESS, WHATSAPP } from '@/lib/constants'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
@@ -27,6 +28,7 @@ export function generateStaticParams() {
   return [
     ...SERVICES_DATA.map((s) => ({ slug: s.slug })),
     ...LOCATIONS_DATA.map((l) => ({ slug: l.slug })),
+    ...LOCATION_SERVICES_DATA.map((ls) => ({ slug: ls.slug })),
   ]
 }
 
@@ -73,6 +75,23 @@ export async function generateMetadata({
     }
   }
 
+  const locationService = LOCATION_SERVICES_DATA.find((ls) => ls.slug === slug)
+  if (locationService) {
+    return {
+      title: locationService.metaTitle,
+      description: locationService.metaDescription,
+      alternates: { canonical: `${BUSINESS.url}/${locationService.slug}` },
+      openGraph: {
+        title: locationService.metaTitle,
+        description: locationService.metaDescription,
+        url: `${BUSINESS.url}/${locationService.slug}`,
+        siteName: BUSINESS.name,
+        locale: 'en_BH',
+        type: 'website',
+      },
+    }
+  }
+
   return {}
 }
 
@@ -99,6 +118,15 @@ export default async function SlugPage({
       location.servicesPopular.includes(s.slug)
     )
     return <LocationPageContent location={location} popularServices={popularServices} />
+  }
+
+  const locationService = LOCATION_SERVICES_DATA.find((ls) => ls.slug === slug)
+  if (locationService) {
+    const service = SERVICES_DATA.find((s) => s.slug === locationService.serviceSlug)
+    const location = LOCATIONS_DATA.find((l) => l.slug === locationService.locationSlug)
+    if (service && location) {
+      return <LocationServicePageContent locationService={locationService} service={service} location={location} />
+    }
   }
 
   notFound()
@@ -532,12 +560,6 @@ function LocationPageContent({
         opens: '09:00',
         closes: '20:00',
       },
-      {
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Friday'],
-        opens: '14:00',
-        closes: '20:00',
-      },
     ],
     areaServed: [
       { '@type': 'City', name: location.area },
@@ -631,7 +653,7 @@ function LocationPageContent({
                 </span>
                 <span className="flex items-center gap-1.5 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-xs font-medium text-zinc-200 backdrop-blur-sm">
                   <Clock className="h-3 w-3 text-accent-gold" aria-hidden />
-                  Sat–Thu 9 AM – 8 PM | Fri 2 PM – 8 PM
+                  {BUSINESS.openingHoursDisplay}
                 </span>
                 <span className="flex items-center gap-1.5 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-xs font-medium text-zinc-200 backdrop-blur-sm">
                   <Car className="h-3 w-3 text-accent-gold" aria-hidden />
@@ -883,6 +905,292 @@ function LocationPageContent({
                   Call {BUSINESS.phone.primaryDisplay}
                 </a>
               </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <Footer />
+      <StickyContactBar />
+    </>
+  )
+}
+
+/* ════════════════════════════════════════════════════════════════════
+   LOCATION × SERVICE PAGE
+═══════════════════════════════════════════════════════════════════ */
+
+function LocationServicePageContent({
+  locationService,
+  service,
+  location,
+}: {
+  locationService: (typeof LOCATION_SERVICES_DATA)[number]
+  service: (typeof SERVICES_DATA)[number]
+  location: (typeof LOCATIONS_DATA)[number]
+}) {
+  const whatsappUrl = WHATSAPP.booking('my vehicle', service.name, location.area)
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: BUSINESS.url },
+      { '@type': 'ListItem', position: 2, name: service.name, item: `${BUSINESS.url}/${service.slug}` },
+      { '@type': 'ListItem', position: 3, name: `${service.name} ${location.area}`, item: `${BUSINESS.url}/${locationService.slug}` },
+    ],
+  }
+
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: `${service.name} — ${location.area}, Bahrain`,
+    description: locationService.localSpecific,
+    url: `${BUSINESS.url}/${locationService.slug}`,
+    provider: {
+      '@type': 'LocalBusiness',
+      name: BUSINESS.name,
+      telephone: BUSINESS.phone.primary,
+      url: BUSINESS.url,
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: BUSINESS.address.street,
+        addressLocality: BUSINESS.address.locality,
+        addressRegion: BUSINESS.address.region,
+        postalCode: BUSINESS.address.postalCode,
+        addressCountry: BUSINESS.address.country,
+      },
+    },
+    areaServed: { '@type': 'City', name: location.area },
+    offers: service.pricing.map((p) => ({
+      '@type': 'Offer',
+      name: `${service.name} — ${p.vehicle}`,
+      price: p.range,
+      priceCurrency: 'BHD',
+    })),
+  }
+
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+
+      <Header />
+
+      <main className="bg-background text-white pb-24">
+
+        {/* ── Hero ────────────────────────────────────────────── */}
+        <section className="relative min-h-[65vh] flex items-end">
+          <Image
+            src={locationService.heroImage}
+            alt={`${service.name} in ${location.area}, Bahrain — AutoSpa Bahrain`}
+            fill
+            priority
+            className="object-cover object-center"
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/88 via-black/45 to-black/20" />
+
+          <div className="relative z-10 w-full px-4 pb-16 pt-32">
+            <div className="mx-auto max-w-6xl">
+              <nav aria-label="Breadcrumb" className="mb-6">
+                <ol className="flex flex-wrap items-center gap-2 text-xs text-zinc-400">
+                  <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
+                  <li aria-hidden className="text-zinc-600">/</li>
+                  <li><Link href={`/${service.slug}`} className="hover:text-white transition-colors">{service.name}</Link></li>
+                  <li aria-hidden className="text-zinc-600">/</li>
+                  <li className="text-zinc-300" aria-current="page">{location.area}</li>
+                </ol>
+              </nav>
+
+              <h1 className="font-display mb-3 text-3xl font-bold text-white sm:text-4xl lg:text-5xl">
+                {service.name}{' '}
+                <span className="text-accent-gold">{location.area}</span>
+                <span className="text-zinc-300">, Bahrain</span>
+              </h1>
+              <p className="mb-8 max-w-xl text-lg text-zinc-300">
+                {service.tagline} — serving {location.area} by AutoSpa Bahrain W.L.L.
+              </p>
+
+              <div className="mb-8 flex flex-wrap gap-3">
+                <span className="flex items-center gap-1.5 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-xs font-medium text-zinc-200 backdrop-blur-sm">
+                  <MapPin className="h-3 w-3 text-accent-gold" aria-hidden />
+                  {location.distanceFromShop}
+                </span>
+                <span className="flex items-center gap-1.5 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-xs font-medium text-zinc-200 backdrop-blur-sm">
+                  <Car className="h-3 w-3 text-accent-gold" aria-hidden />
+                  Free Collection
+                </span>
+              </div>
+
+              <div className="flex flex-col items-start gap-3 sm:flex-row sm:flex-wrap">
+                <Link href="/book" className="inline-flex items-center gap-2 rounded-xl bg-accent-gold px-6 py-3 text-sm font-bold text-black transition-all duration-150 hover:bg-accent-gold-light active:scale-95">
+                  <CalendarCheck className="h-4 w-4" aria-hidden />
+                  Book Now
+                </Link>
+                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-xl border border-white/25 bg-white/8 px-6 py-3 text-sm font-semibold text-white backdrop-blur-sm transition-all duration-150 hover:border-white/40 hover:bg-white/12 active:scale-95">
+                  <MessageCircle className="h-4 w-4" aria-hidden />
+                  WhatsApp
+                </a>
+                <a href={`tel:${BUSINESS.phone.primary}`} className="inline-flex items-center gap-2 rounded-xl border border-white/25 bg-white/8 px-6 py-3 text-sm font-semibold text-white backdrop-blur-sm transition-all duration-150 hover:border-white/40 hover:bg-white/12 active:scale-95">
+                  <Phone className="h-4 w-4" aria-hidden />
+                  {BUSINESS.phone.primaryDisplay}
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div aria-hidden className="h-px bg-gradient-to-r from-transparent via-accent-gold/30 to-transparent" />
+
+        {/* ── Local intro ─────────────────────────────────────── */}
+        <section aria-labelledby="local-intro-heading" className="px-4 py-16 sm:py-20">
+          <div className="mx-auto max-w-6xl">
+            <div className="rounded-2xl border border-white/8 bg-surface p-6 sm:p-8">
+              <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-accent-gold">
+                {service.name} in {location.area}
+              </p>
+              <h2 id="local-intro-heading" className="font-display mb-4 text-2xl font-bold text-white sm:text-3xl">
+                Why {location.area} Residents Choose AutoSpa Bahrain
+              </h2>
+              <p className="text-base leading-relaxed text-zinc-300">{locationService.localSpecific}</p>
+            </div>
+          </div>
+        </section>
+
+        <div aria-hidden className="h-px bg-gradient-to-r from-transparent via-white/6 to-transparent" />
+
+        {/* ── About the service ───────────────────────────────── */}
+        <section aria-labelledby="service-intro-heading" className="px-4 py-16 sm:py-20">
+          <div className="mx-auto max-w-6xl">
+            <div className="rounded-2xl border border-accent-gold/20 bg-surface p-6 sm:p-8">
+              <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-accent-gold">What Is It?</p>
+              <h2 id="service-intro-heading" className="font-display mb-4 text-2xl font-bold text-white sm:text-3xl">
+                About {service.name}
+              </h2>
+              <p className="mb-4 text-base leading-relaxed text-zinc-300">{service.intro}</p>
+              <p className="text-sm leading-relaxed text-zinc-400">{service.whyBahrain}</p>
+            </div>
+          </div>
+        </section>
+
+        <div aria-hidden className="h-px bg-gradient-to-r from-transparent via-white/6 to-transparent" />
+
+        {/* ── Pricing ─────────────────────────────────────────── */}
+        <section aria-labelledby="ls-pricing-heading" className="px-4 py-16 sm:py-20">
+          <div className="mx-auto max-w-6xl">
+            <div className="mb-10 text-center">
+              <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-accent-gold">Transparent Pricing</p>
+              <h2 id="ls-pricing-heading" className="font-display text-2xl font-bold text-white sm:text-3xl">Pricing Guide (BHD)</h2>
+              <p className="mt-3 text-sm text-zinc-500">Final quote confirmed after vehicle inspection.</p>
+            </div>
+            <div className="overflow-hidden rounded-2xl border border-white/8">
+              <div className="overflow-x-auto">
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr className="border-b border-white/8 bg-surface-elevated">
+                      <th scope="col" className="px-5 py-4 text-left text-xs font-semibold uppercase tracking-wide text-zinc-400">Vehicle</th>
+                      <th scope="col" className="px-5 py-4 text-left text-xs font-semibold uppercase tracking-wide text-accent-gold">Price</th>
+                      <th scope="col" className="hidden px-5 py-4 text-left text-xs font-semibold uppercase tracking-wide text-zinc-500 sm:table-cell">Notes</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-white/6 bg-surface">
+                    {service.pricing.map((row, i) => (
+                      <tr key={i} className="transition-colors hover:bg-surface-elevated">
+                        <td className="px-5 py-4 font-medium text-white">{row.vehicle}</td>
+                        <td className="px-5 py-4 font-bold text-accent-gold">{row.range}</td>
+                        {row.note && <td className="hidden px-5 py-4 text-zinc-500 sm:table-cell">{row.note}</td>}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <p className="mt-4 flex items-center gap-2 text-xs text-zinc-500">
+              <Clock className="h-3.5 w-3.5 flex-shrink-0" aria-hidden />
+              <strong className="text-zinc-400">Duration:</strong>&nbsp;{service.duration}
+            </p>
+          </div>
+        </section>
+
+        <div aria-hidden className="h-px bg-gradient-to-r from-transparent via-white/6 to-transparent" />
+
+        {/* ── Process ─────────────────────────────────────────── */}
+        <section aria-labelledby="ls-process-heading" className="px-4 py-16 sm:py-20">
+          <div className="mx-auto max-w-6xl">
+            <div className="mb-10 text-center">
+              <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-accent-gold">Step by Step</p>
+              <h2 id="ls-process-heading" className="font-display text-2xl font-bold text-white sm:text-3xl">How It Works</h2>
+            </div>
+            <ol className="space-y-4">
+              {service.process.map((item, index) => (
+                <li key={index} className="flex gap-5 rounded-2xl border border-white/8 bg-surface p-5 sm:p-6">
+                  <span aria-hidden className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-xl bg-accent-gold/10 text-sm font-bold text-accent-gold ring-1 ring-accent-gold/25">
+                    {index + 1}
+                  </span>
+                  <div>
+                    <h3 className="mb-1.5 font-semibold text-white">{item.step}</h3>
+                    <p className="text-sm leading-relaxed text-zinc-400">{item.detail}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </section>
+
+        <div aria-hidden className="h-px bg-gradient-to-r from-transparent via-white/6 to-transparent" />
+
+        {/* ── Directions ──────────────────────────────────────── */}
+        <section aria-labelledby="ls-directions-heading" className="px-4 py-16 sm:py-20">
+          <div className="mx-auto max-w-6xl">
+            <div className="rounded-2xl border border-accent-gold/20 bg-surface p-6 sm:p-8">
+              <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-accent-gold">Getting Here</p>
+              <h2 id="ls-directions-heading" className="font-display mb-4 text-xl font-bold text-white sm:text-2xl">
+                From {location.area} to AutoSpa Bahrain
+              </h2>
+              <p className="mb-5 text-sm leading-relaxed text-zinc-300">{location.directions}</p>
+              <div className="flex flex-wrap gap-3">
+                <a href={BUSINESS.mapDirections} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-xl border border-accent-gold/40 px-4 py-2.5 text-sm font-semibold text-accent-gold transition-all duration-150 hover:bg-accent-gold/10">
+                  <MapPin className="h-4 w-4" aria-hidden />
+                  Open in Google Maps
+                </a>
+                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-xl border border-white/20 px-4 py-2.5 text-sm font-semibold text-white transition-all duration-150 hover:border-white/40 hover:bg-white/5">
+                  <MessageCircle className="h-4 w-4" aria-hidden />
+                  Arrange Collection
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── Bottom CTA ──────────────────────────────────────── */}
+        <section className="px-4 py-16 sm:py-20">
+          <div className="mx-auto max-w-6xl">
+            <div className="rounded-2xl border border-accent-gold/25 bg-gradient-to-br from-surface to-surface-elevated p-8 text-center sm:p-12">
+              <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-accent-gold">
+                Ready to Book from {location.area}?
+              </p>
+              <h2 className="font-display mb-4 text-2xl font-bold text-white sm:text-3xl">
+                {service.name} — {location.area}, Bahrain
+              </h2>
+              <p className="mx-auto mb-8 max-w-md text-zinc-400">
+                We collect from {location.area}, complete your {service.name.toLowerCase()} at our Budaiya workshop, and return your vehicle on completion.
+              </p>
+              <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center sm:flex-wrap">
+                <Link href="/book" className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-accent-gold px-8 py-3.5 font-bold text-black transition-all duration-150 hover:bg-accent-gold-light active:scale-95 sm:w-auto">
+                  <CalendarCheck className="h-5 w-5" aria-hidden />
+                  Book Now
+                </Link>
+                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-white/15 px-8 py-3.5 text-sm font-semibold text-white transition-all duration-150 hover:border-white/30 hover:bg-white/5 sm:w-auto">
+                  <MessageCircle className="h-5 w-5" aria-hidden />
+                  WhatsApp
+                </a>
+                <a href={`tel:${BUSINESS.phone.primary}`} className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-white/15 px-8 py-3.5 text-sm font-semibold text-white transition-all duration-150 hover:border-white/30 hover:bg-white/5 sm:w-auto">
+                  <Phone className="h-5 w-5" aria-hidden />
+                  Call {BUSINESS.phone.primaryDisplay}
+                </a>
+              </div>
+              <p className="mt-5 text-xs text-zinc-600">{BUSINESS.openingHoursDisplay}</p>
             </div>
           </div>
         </section>

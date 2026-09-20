@@ -1,4 +1,4 @@
-export interface ServiceProcess {
+﻿export interface ServiceProcess {
   step: string
   detail: string
 }
@@ -510,5 +510,207 @@ export const SERVICES_DATA: ServiceData[] = [
       },
     ],
     relatedSlugs: ['ceramic-coating-bahrain', 'paint-protection-film-bahrain', 'full-showroom-detail-bahrain'],
+  },
+
+  {
+    slug: 'window-tinting-bahrain',
+    name: 'Window Tinting',
+    tagline: 'UV & Heat Rejection Film',
+    heroImage: '/autospa-bahrain-car-detailing-lexus-es-maqaba-budaiya.webp',
+    metaTitle: 'Window Tinting Bahrain | UV & Heat Rejection — AutoSpa Bahrain Budaiya',
+    metaDescription:
+      'Professional window tinting in Bahrain from BHD 60. High-performance UV and heat rejection films installed at our Budaiya workshop. Legal VLT compliance. Book on WhatsApp +973 1759 5971.',
+    intro:
+      "Window tinting is one of the most practical investments a Bahrain driver can make. AutoSpa Bahrain installs high-performance window films that reject up to 99% of UV radiation and significantly reduce solar heat gain inside the cabin — lowering interior temperatures, protecting leather and dashboard surfaces, and reducing strain on the air conditioning system. We stock a range of films from entry-level dyed options to premium ceramic and nano-ceramic films, all cut precisely using digital templating for a factory-fit finish with no bubbles, lifting edges, or distortion.",
+    whyBahrain:
+      "Bahrain's summer sun is extreme — UV Index 11–12 is routine, and cabin temperatures in a parked car regularly exceed 70–80 °C without protection. This heat degrades leather, fades fabric, dries out plastic trim, and makes every entry into an unshaded vehicle uncomfortable. Beyond comfort, prolonged UV exposure is a major cause of dashboard cracking and interior fading in Bahrain's vehicles. A quality ceramic window film addresses all of these: it rejects heat, blocks UV, improves cabin comfort substantially, and prolongs the life of interior surfaces. We install all films in compliance with Bahrain's legal visible light transmission (VLT) requirements, ensuring your vehicle passes inspection.",
+    process: [
+      { step: 'Film Selection', detail: 'We discuss your priority — privacy, heat rejection, or UV protection — and recommend the appropriate film grade (dyed, carbon, ceramic, or nano-ceramic) for your budget and requirements.' },
+      { step: 'Glass Preparation', detail: 'All glass surfaces are cleaned using specialist glass cleaner and a clay bar to remove silica deposits, water spots, and any previous tint adhesive residue before application.' },
+      { step: 'Digital Template Cut', detail: 'Film is precision-cut using digital templates matched to your vehicle model and year — no hand-cutting guesswork, resulting in tight edge fits to the rubber seals on all windows.' },
+      { step: 'Application & Squeegee', detail: 'Film is applied using a slip solution and squeeged from centre outward to eliminate air pockets and ensure complete adhesion across the full glass area.' },
+      { step: 'Cure Period', detail: 'Newly tinted windows require a 3–5 day cure period before rolling down. We advise on correct post-install care to ensure the film sets without bubbling.' },
+    ],
+    benefits: [
+      'Up to 99% UV rejection — protects skin and interior surfaces',
+      'Significant heat reduction — up to 60% solar heat rejection with ceramic films',
+      'Reduced air conditioning load — improves fuel economy',
+      'Glare reduction for safer driving in Bahrain\'s bright conditions',
+      'Enhanced privacy and security — harder to see valuables inside',
+      'Legal VLT compliance for all installed films',
+      'Protects leather, plastics, and dashboard from UV fading',
+    ],
+    pricing: [
+      { vehicle: 'Saloon / Sedan', range: 'BHD 60–160', note: 'Dyed to ceramic-grade film' },
+      { vehicle: 'SUV / 4WD', range: 'BHD 80–200', note: 'Full 5-window or all windows incl. panoramic' },
+      { vehicle: 'Front Windscreen Film', range: 'BHD 40–80', note: 'UV-clear or light-tint (legal compliance maintained)' },
+    ],
+    duration: '3–5 hours depending on vehicle and film type',
+    faqs: [
+      {
+        q: 'Is window tinting legal in Bahrain?',
+        a: 'Yes, within Bahrain Traffic Law VLT limits. Side windows must maintain a minimum visible light transmission of 30% (darker than this is illegal), and the windscreen must use a UV-clear or very light tint with no significant VLT reduction. We install all films within legal limits and can provide documentation of VLT compliance on request.',
+      },
+      {
+        q: 'What is the difference between dyed, carbon, and ceramic window tint?',
+        a: 'Dyed film is the entry level — it provides basic privacy and some heat reduction but has limited longevity in Bahrain\'s UV. Carbon film blocks more heat than dyed and does not fade. Ceramic and nano-ceramic films are the premium tier: they reject the highest amount of heat and UV using infrared-blocking ceramic particles, are completely signal-transparent (no interference with GPS, phone, or TPMS), and last the lifetime of the vehicle. For Bahrain\'s conditions, we recommend ceramic film as the best long-term value.',
+      },
+      {
+        q: 'How long does window tint last in Bahrain\'s heat?',
+        a: 'Quality ceramic and carbon films last 10+ years under Bahrain\'s conditions. Entry-level dyed films typically show fading and purple discolouration within 2–3 years due to UV degradation. If you are investing in long-term protection, the additional cost of ceramic film pays for itself in longevity and performance.',
+      },
+    ],
+    relatedSlugs: ['ceramic-coating-bahrain', 'paint-protection-film-bahrain', 'interior-detailing-bahrain'],
+  },
+
+  {
+    slug: 'professional-car-wash-bahrain',
+    name: 'Professional Car Wash',
+    tagline: 'Hand Wash — Two-Bucket Method',
+    heroImage: '/autospa-bahrain-luxury-car-valeting-bentley-continental-maqaba-budaiya.webp',
+    metaTitle: 'Professional Car Wash Bahrain | Hand Wash & Valet — AutoSpa Budaiya',
+    metaDescription:
+      'Professional hand car wash in Budaiya, Bahrain from BHD 15. Two-bucket method, rinse-less wash, and foam cannon pre-wash. No brush marks — safe for coated and detailed vehicles. Book on WhatsApp.',
+    intro:
+      "AutoSpa Bahrain's professional car wash goes far beyond a standard tunnel wash or automatic machine. We use a two-bucket hand wash system with pH-neutral shampoo, a foam cannon pre-soak to loosen road grime safely, and a dedicated rinse bucket to prevent cross-contamination between washes. Every contact with the paint surface is made with a premium microfibre wash mitt, not a sponge or brush that drags abrasive particles across the clear coat. For clients with ceramic-coated or recently detailed vehicles, we offer a no-contact rinse-less wash using waterless wash products approved for coated surfaces. The result is a clean car with zero fresh scratches — every time.",
+    whyBahrain:
+      "In Bahrain, the default car wash experience is either an automatic roller brush machine (which introduces micro-scratches across the clear coat with every visit) or a quick pressure wash with the same sponge used on the previous 50 cars. Neither is acceptable for a vehicle that has had professional paint correction, ceramic coating, or PPF applied. AutoSpa Bahrain's professional wash service is designed for owners who understand that the wrong wash technique undoes months of detailing investment. We use the same clean-contact protocol on a BHD 20 wash as we use during a BHD 500 full showroom detail — because the paint surface cannot tell the difference.",
+    process: [
+      { step: 'Pre-Rinse & Foam Cannon', detail: 'High-pressure rinse removes loose surface sand and grit. A foam cannon applies thick pH-neutral snow foam that dwells on the surface to emulsify road grime without contact, minimising abrasion risk.' },
+      { step: 'Two-Bucket Hand Wash', detail: 'One bucket contains fresh soapy water; the second is a dedicated rinse bucket. The wash mitt is rinsed in the rinse bucket after every panel to avoid dragging grit back across the paint.' },
+      { step: 'Wheel & Arch Cleaning', detail: 'Alloy wheels, arches, and tyres are cleaned with dedicated brushes and wheel-safe chemicals — never with the same mitt used on painted surfaces.' },
+      { step: 'Final Rinse & Blow Dry', detail: 'A final rinse removes all shampoo residue. The car is dried using clean, dry microfibre drying towels in a straight wiping motion to eliminate water spots and avoid swirl marks.' },
+      { step: 'Tyre Dressing & Glass Wipe', detail: 'Tyres are dressed with a satin-finish tyre gel for presentation. Glass is wiped down with a streak-free glass cleaner for clear visibility.' },
+    ],
+    benefits: [
+      'Zero swirl marks — microfibre-only contact, two-bucket method',
+      'Safe for ceramic-coated, PPF-wrapped, and freshly corrected vehicles',
+      'pH-neutral shampoo preserves wax, sealant, and coating layers',
+      'Foam pre-soak removes grit before any contact with the paint surface',
+      'Dedicated wheel cleaning — no cross-contamination with paint mitts',
+      'Consistent professional result — not dependent on a rushed forecourt wash',
+    ],
+    pricing: [
+      { vehicle: 'Small Car / Saloon', range: 'BHD 15–25', note: 'Exterior wash + tyre dress' },
+      { vehicle: 'SUV / 4WD / MPV', range: 'BHD 20–35', note: 'Exterior wash + tyre dress + wheel face clean' },
+      { vehicle: 'Wash + Interior Vacuum', range: 'BHD 25–45', note: 'Exterior wash + full interior vacuum and wipe' },
+    ],
+    duration: '1–2 hours',
+    faqs: [
+      {
+        q: 'Why is a professional hand wash better than an automatic car wash in Bahrain?',
+        a: 'Automatic car wash brushes and cloth rollers accumulate abrasive sand, grit, and paint particles from every vehicle that passes through them. Each wash drags these particles across your clear coat, inflicting micro-scratches that accumulate into the dull, swirl-marked finish you see on most older vehicles in Bahrain. A two-bucket hand wash with a clean microfibre mitt makes zero abrasive contact with the paint, preserving gloss and protecting any coating or wax layer.',
+      },
+      {
+        q: 'I have a ceramic coating — can I get a regular wash at AutoSpa Bahrain?',
+        a: 'Yes, and we strongly recommend it. Ceramic-coated vehicles still need regular washing to remove road contamination, bird lime, and industrial fallout that accumulates on the coating surface. We use coating-safe, pH-neutral shampoo that does not strip or degrade the SiO₂ layer. We also offer a top-up spray sealant coat for coated vehicles that have been in service for 6+ months to refresh the hydrophobic properties.',
+      },
+      {
+        q: 'How often should I wash my car in Bahrain?',
+        a: 'In Bahrain\'s dusty conditions, a wash every 2–3 weeks is the practical minimum for maintaining appearance. During periods of Shamal wind activity (typically November–March), weekly washing may be necessary to prevent abrasive sand sitting on the paint surface. Vehicles parked outdoors accumulate contamination faster than garage-kept vehicles. A ceramic coating significantly reduces contamination adherence and makes each wash faster and easier.',
+      },
+    ],
+    relatedSlugs: ['ceramic-coating-bahrain', 'interior-detailing-bahrain', 'full-showroom-detail-bahrain'],
+  },
+
+  {
+    slug: 'headlight-restoration-bahrain',
+    name: 'Headlight Restoration',
+    tagline: 'Clear Lens — UV Seal Protection',
+    heroImage: '/sports-coupe-paint-correction-interior-detailing-budaiya.webp',
+    metaTitle: 'Headlight Restoration Bahrain | Yellowed Headlights Fixed — AutoSpa Bahrain',
+    metaDescription:
+      'Headlight restoration in Bahrain from BHD 25 per pair. Removes yellowing, oxidation, and hazing for MOT compliance and improved night visibility. UV-sealed finish at AutoSpa Budaiya.',
+    intro:
+      "Headlight restoration removes the yellowing, oxidation, and hazing that accumulates on polycarbonate headlight lenses over time in Bahrain's UV-intense environment. AutoSpa Bahrain's multi-stage headlight restoration process uses progressive wet-sanding from coarser to finer abrasive grades, machine polishing with compound, and a final UV-resistant sealant coat that prevents re-oxidation. The result is a visually clear lens that resembles the factory OEM appearance and restores proper beam projection for safe night driving — critical for MOT inspection and road safety.",
+    whyBahrain:
+      "Bahrain's extreme UV environment degrades polycarbonate headlight lenses faster than in almost any other market. Most vehicles 3–5 years old in Bahrain will show noticeable yellowing and hazing, and by 7–10 years many lenses are severely fogged. Beyond aesthetics, oxidised headlights reduce beam output by up to 75%, significantly impairing night visibility — a genuine road safety concern. Headlight replacement from a Bahrain dealership typically costs BHD 200–800 per assembly. Restoration at a fraction of this cost, sealed with UV-resistant lacquer, can extend the clarity and service life of existing lenses by 3–5 years.",
+    process: [
+      { step: 'Assessment & Taping', detail: 'Headlights are assessed for oxidation depth. Surrounding paintwork is masked with precision tape to protect the finish during wet-sanding.' },
+      { step: 'Progressive Wet-Sanding', detail: 'Multi-grade wet-sanding removes the oxidised surface layer from the polycarbonate lens, starting with a coarser grade to remove deep yellowing and progressing through finer grades to restore a smooth, haze-free surface.' },
+      { step: 'Machine Polish', detail: 'A light cutting compound applied with a DA polisher removes any remaining sanding marks and restores optical clarity to the lens surface.' },
+      { step: 'UV Sealant Application', detail: 'A dedicated UV-resistant headlight sealant or clear lacquer is applied to the restored lens surface to prevent immediate re-oxidation and protect the clarity against Bahrain\'s UV for 2–3 years.' },
+    ],
+    benefits: [
+      'Restores optical clarity — removes yellowing, hazing, and oxidation',
+      'Improves night visibility and beam projection significantly',
+      'Fraction of the cost of replacement headlight assemblies',
+      'UV sealant extends clarity for 2–3 years post-restoration',
+      'MOT compliance — clear lenses required for roadworthiness',
+      'Completed same day — typically within 2–3 hours',
+    ],
+    pricing: [
+      { vehicle: 'Standard Headlights (pair)', range: 'BHD 25–45', note: 'Mild to moderate oxidation' },
+      { vehicle: 'Severe Oxidation (pair)', range: 'BHD 45–75', note: 'Deep yellowing requiring extended wet-sanding stages' },
+      { vehicle: 'Single Headlight', range: 'BHD 15–35', note: 'One lens only — price varies with severity' },
+    ],
+    duration: '2–3 hours for a pair',
+    faqs: [
+      {
+        q: 'How long does headlight restoration last in Bahrain?',
+        a: 'With a quality UV sealant or lacquer applied after polishing, restored headlights remain clear for 2–3 years under Bahrain\'s UV conditions. Without a sealant, re-oxidation begins within weeks. If you have previously had a restoration done elsewhere that has already re-oxidised, this is the cause — we always apply UV sealant as the final step.',
+      },
+      {
+        q: 'Are my headlights suitable for restoration, or do they need replacing?',
+        a: 'The majority of yellowed and hazed headlights are restorable. The exceptions are lenses with significant internal moisture damage or cracking, or lenses that have been previously sanded so many times that the polycarbonate layer is too thin for further abrasion. We assess every headlight before starting and will tell you honestly if replacement is the better option.',
+      },
+      {
+        q: 'Will headlight restoration also remove internal cloudiness?',
+        a: 'External restoration removes the oxidation layer from the outside of the lens. If the cloudiness is inside the headlight assembly (caused by moisture ingress or internal fogging), the lens must be opened and dried internally, which is a separate procedure. We can assess which type of fogging you have before quoting.',
+      },
+    ],
+    relatedSlugs: ['paint-correction-bahrain', 'full-showroom-detail-bahrain', 'professional-car-wash-bahrain'],
+  },
+
+  {
+    slug: 'vinyl-wrapping-bahrain',
+    name: 'Auto Vinyl Wrapping',
+    tagline: 'Colour Change & Protective Wrap',
+    heroImage: '/matte-black-ppf-paint-protection-autospa-maqaba.webp',
+    metaTitle: 'Vinyl Wrapping Bahrain | Car Wrap Colour Change — AutoSpa Bahrain Budaiya',
+    metaDescription:
+      'Professional vinyl wrapping in Bahrain. Full colour change, partial wraps, and roof wraps from BHD 200. Gloss, matte, satin & carbon fibre finishes. AutoSpa Bahrain, Budaiya. WhatsApp to book.',
+    intro:
+      "AutoSpa Bahrain offers professional automotive vinyl wrapping for full colour change, partial wraps, bonnet and roof wraps, and decorative applications. Using premium cast vinyl films from leading manufacturers, we achieve clean, seamless finishes on complex curves, recessed panels, and bodywork with compound curves that reveal the quality difference between professional and amateur installations. Vinyl wrapping protects the original factory paintwork underneath, is fully reversible, and provides a dramatically different appearance without the cost and permanence of a respray. A well-installed wrap under Bahrain's conditions can last 4–7 years.",
+    whyBahrain:
+      "In Bahrain's ultra-competitive luxury vehicle market, personalisation and distinction matter — and vinyl wrapping provides both without permanently altering the vehicle. A matte black or satin wrap on a white Land Cruiser, a carbon fibre bonnet wrap on a sports car, or a full colour change from silver to Midnight Blue are all reversible transformations that preserve the factory paint underneath and protect it during the wrap's lifespan. Resale value is maintained because the original paint, sealed under the vinyl, is protected from UV and minor abrasion throughout the wrap's service life.",
+    process: [
+      { step: 'Consultation & Film Selection', detail: 'We discuss the target finish — full colour change, partial wrap, or accent wrap — and select the appropriate vinyl film (gloss, matte, satin, chrome delete, carbon fibre texture) from our current stock.' },
+      { step: 'Surface Preparation', detail: 'All panels to be wrapped are decontaminated, stripped of wax or coating layers, and cleaned with isopropyl alcohol. Seams and edges are inspected for paint condition — wrap adhesion requires a clean, dry surface.' },
+      { step: 'Panel Removal (if required)', detail: 'For the cleanest finish, external mirrors, door handles, and trim pieces may be partially removed to allow the vinyl to wrap fully under edges rather than being cut at the visible edge.' },
+      { step: 'Film Application & Heat Forming', detail: 'Panels are wrapped using heat guns to conform the film to compound curves and body lines. Seams are located in inconspicuous areas. Each panel is squeegeed to remove air pockets and ensure full adhesion.' },
+      { step: 'Post-Heat & Inspection', detail: 'All wrapped edges receive a final post-heat treatment to prevent lifting. The complete vehicle is inspected under controlled lighting for any lifting, bubbling, or misaligned seams before handover.' },
+    ],
+    benefits: [
+      'Full colour change without respraying — preserves factory paint for resale',
+      'Reversible — original paint is protected under the vinyl',
+      'Wide range of finishes — gloss, matte, satin, chrome-delete, carbon texture',
+      '4–7 year lifespan under Bahrain\'s conditions with quality cast vinyl',
+      'Protects paint from UV fading, minor stone chips, and light abrasion',
+      'Partial wraps — bonnet, roof, pillars, mirrors — for accent customisation',
+    ],
+    pricing: [
+      { vehicle: 'Saloon / Sedan (Full Wrap)', range: 'BHD 450–800', note: 'Standard gloss or satin vinyl, full colour change' },
+      { vehicle: 'SUV / 4WD (Full Wrap)', range: 'BHD 600–1,100', note: 'Premium cast vinyl, full exterior including roof' },
+      { vehicle: 'Bonnet or Roof Wrap', range: 'BHD 80–180', note: 'Single panel, matte, carbon, or contrast colour' },
+      { vehicle: 'Chrome Delete (trim/pillars)', range: 'BHD 120–300', note: 'Satin black or matte vinyl over chrome trim' },
+    ],
+    duration: '2–5 days depending on scope',
+    faqs: [
+      {
+        q: 'How long does a vinyl wrap last in Bahrain\'s heat?',
+        a: 'A quality cast vinyl film installed by a professional typically lasts 4–7 years in Bahrain under normal conditions — vehicles garaged overnight and washed correctly. Calendered (economy-grade) vinyl used by budget installers degrades faster and begins to shrink, lift, and discolour within 1–2 years. We use cast film, which is designed for the thermal expansion and contraction of Bahrain\'s temperature cycles.',
+      },
+      {
+        q: 'Will wrapping my car affect its resale value?',
+        a: 'A professionally installed and properly maintained vinyl wrap should have no negative effect on resale value — in many cases it positively affects it by protecting the original factory paint underneath from UV fading and minor abrasion. When you sell or remove the wrap, the original colour is revealed in better condition than it would have been without the wrap. Buyers who want a specific colour can have the wrap removed; buyers who want the wrapped finish are often willing to pay a premium.',
+      },
+      {
+        q: 'Can I wrap a car that already has paint defects or chips?',
+        a: 'Minor imperfections — light chips, small scratches — will be visible under vinyl wrap because the film conforms to the surface beneath it. Significant damage (rust, peeling clear coat, deep scratches) will be more visible. For the cleanest result, we recommend addressing significant paint defects before wrapping. We can assess your vehicle and advise on whether preparation work is needed before quoting.',
+      },
+    ],
+    relatedSlugs: ['paint-protection-film-bahrain', 'ceramic-coating-bahrain', 'paint-correction-bahrain'],
+    badge: 'New',
   },
 ]

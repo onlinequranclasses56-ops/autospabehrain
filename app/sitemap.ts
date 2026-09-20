@@ -1,6 +1,7 @@
 import type { MetadataRoute } from 'next'
 import { SERVICES_DATA } from '@/lib/services-data'
 import { LOCATIONS_DATA } from '@/lib/locations-data'
+import { LOCATION_SERVICES_DATA } from '@/lib/location-services-data'
 import { BUSINESS } from '@/lib/constants'
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -36,5 +37,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }))
 
-  return [...homepage, ...servicePages, ...locationPages]
+  const locationServicePages: MetadataRoute.Sitemap = LOCATION_SERVICES_DATA.map((ls) => ({
+    url: `${base}/${ls.slug}`,
+    lastModified: now,
+    changeFrequency: 'monthly',
+    priority: 0.7,
+  }))
+
+  return [...homepage, ...servicePages, ...locationPages, ...locationServicePages]
 }

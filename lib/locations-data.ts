@@ -26,7 +26,7 @@ export const LOCATIONS_DATA: LocationData[] = [
     metaDescription:
       'AutoSpa Bahrain is based in Budaiya — walk-ins welcome, no travel fee. Ceramic coating, PPF, Zymöl detailing & full interior steam clean. Building 18, Road 54, Budaiya 505.',
     intro:
-      'AutoSpa Bahrain is located directly in Budaiya — Building 18, Road 54, Budaiya 505, off the Budaiya Highway behind the Harley-Davidson showroom. If you live or work in Budaiya, bringing your car to us is the most straightforward option with no waiting for collection logistics. Walk-in enquiries are welcome during business hours (Sat–Thu 9 AM – 8 PM, Fri 2 PM – 8 PM), and same-day bookings are available for smaller services including wash and polish, interior steam cleaning, and Zymöl detail.',
+      'AutoSpa Bahrain is located directly in Budaiya — Building 18, Road 54, Budaiya 505, off the Budaiya Highway behind the Harley-Davidson showroom. If you live or work in Budaiya, bringing your car to us is the most straightforward option with no waiting for collection logistics. Walk-in enquiries are welcome during business hours (Saturday–Thursday 9 AM – 8 PM, Friday: Closed), and same-day bookings are available for smaller services including wash and polish, interior steam cleaning, and Zymöl detail.',
     distanceFromShop: 'Our workshop is in Budaiya — no travel required',
     directions:
       'From anywhere in Budaiya, head to the Budaiya Highway (Road 3504). Travel west towards Janabiya. Pass the Harley-Davidson dealership on the right side. Immediately after the Harley-Davidson showroom, turn right into the service road. AutoSpa Bahrain is the first workshop complex on that road — Building 18, Budaiya 505. Parking is available in front of the workshop entrance.',
@@ -41,7 +41,7 @@ export const LOCATIONS_DATA: LocationData[] = [
     faqs: [
       {
         q: 'Can I walk in to AutoSpa Bahrain in Budaiya without an appointment?',
-        a: 'Yes. Walk-ins are welcome at our Budaiya workshop during business hours (Saturday–Thursday 9 AM–8 PM, Friday 2 PM–8 PM). For shorter services — interior steam clean, wash and polish, or a quick assessment — we can often accommodate you the same day. For ceramic coating, PPF, or a full showroom detail, we recommend booking at least 2–3 days ahead via WhatsApp on +973 1759 5971 to guarantee workshop bay availability.',
+        a: 'Yes. Walk-ins are welcome at our Budaiya workshop during business hours (Saturday–Thursday 9 AM–8 PM; we are closed on Fridays). For shorter services — interior steam clean, wash and polish, or a quick assessment — we can often accommodate you the same day. For ceramic coating, PPF, or a full showroom detail, we recommend booking at least 2–3 days ahead via WhatsApp on +973 1759 5971 to guarantee workshop bay availability.',
       },
       {
         q: 'Where exactly is AutoSpa Bahrain in Budaiya?',
@@ -230,6 +230,258 @@ export const LOCATIONS_DATA: LocationData[] = [
       {
         q: 'Can I drop my car to AutoSpa Bahrain from Hamala in the morning and collect it by evening?',
         a: 'For single-day services (interior steam clean, Zymöl exterior detail, paint correction single-stage, wash and polish), yes — drop-off in the morning and collection by early evening is our standard arrangement. For multi-day services (ceramic coating takes 2 days, full PPF 2–3 days, full showroom detail 2–3 days), the car will stay at our Budaiya workshop for the duration, and we can arrange collection or you can drop and pick up at your convenience within our business hours.',
+      },
+    ],
+  },
+
+  {
+    slug: 'car-detailing-aali',
+    name: "Car Detailing A'ali",
+    area: "A'ali",
+    metaTitle: "Car Detailing A'ali Bahrain | Ceramic Coating & PPF — AutoSpa Bahrain",
+    metaDescription:
+      "AutoSpa Bahrain collects from A'ali for ceramic coating, PPF & full car detailing. 20 km to our Budaiya workshop. Trusted by A'ali residents. WhatsApp +973 1759 5971.",
+    intro:
+      "AutoSpa Bahrain provides full collection-and-return car detailing for clients in A'ali, 20 km from our Budaiya workshop via the Shaikh Khalifa bin Salman Highway and Budaiya Highway. A'ali is home to many Bahraini families with premium vehicles — Toyota Land Cruiser, Lexus LX, GMC Yukon, and Range Rover are all common in the area — and our service is built around the expectations of owners who demand professional results and hassle-free logistics.",
+    distanceFromShop: "20 km from A'ali via Shaikh Khalifa bin Salman Highway",
+    directions:
+      "From A'ali, head north on the Shaikh Khalifa bin Salman Highway (Highway 1) towards Manama. At the Janabiya interchange, exit onto the Budaiya Highway (Road 3504) heading west. Continue approximately 8 km along the Budaiya Highway. The Harley-Davidson showroom will appear on the right. Turn right immediately after into the service road. AutoSpa Bahrain is the first workshop on that road — Building 18, Budaiya 505. The drive from A'ali takes approximately 25–30 minutes.",
+    localContext:
+      "A'ali is a predominantly Bahraini residential area in the Central Governorate, well known for its traditional pottery industry and its tightly knit community of Bahraini families. The area has a strong vehicle culture, with Land Cruisers, Patrols, and large American SUVs extremely common. A'ali's location in the central-southern part of Bahrain means vehicles experience more dust exposure and longer commute distances than residents of the northern corridor, making paint protection and regular detailing particularly valuable for maintaining vehicle condition.",
+    servicesPopular: [
+      'ceramic-coating-bahrain',
+      'paint-protection-film-bahrain',
+      'full-showroom-detail-bahrain',
+      'interior-detailing-bahrain',
+    ],
+    faqs: [
+      {
+        q: "Do you collect from A'ali for detailing services?",
+        a: "Yes. We collect regularly from A'ali for ceramic coating, PPF, and full showroom detail bookings. WhatsApp us on +973 1759 5971 with your address, vehicle details, and preferred date and we will confirm a collection time. A'ali is approximately 20 km from our Budaiya workshop — a nominal collection fee may apply for smaller service bookings.",
+      },
+      {
+        q: "What is the most popular service for A'ali clients?",
+        a: "Ceramic coating is consistently the most booked service from A'ali, driven by the area's vehicle profile — large SUVs and premium models whose owners want long-term paint protection that minimises the effort of keeping a vehicle clean in Bahrain's dusty conditions. Full showroom details are also popular, particularly for newer vehicle purchases and pre-sale preparation.",
+      },
+      {
+        q: "How long will the collection and return take for a ceramic coating from A'ali?",
+        a: "We collect your vehicle on day one, perform a full decontamination wash and paint correction on day one, apply the ceramic coating on day two, and return the vehicle to your A'ali address after curing — typically on day two or day three depending on the time of collection. We keep you updated on progress via WhatsApp throughout.",
+      },
+    ],
+  },
+
+  {
+    slug: 'car-detailing-sanad',
+    name: 'Car Detailing Sanad',
+    area: 'Sanad',
+    metaTitle: 'Car Detailing Sanad Bahrain | Ceramic Coating & PPF — AutoSpa Bahrain',
+    metaDescription:
+      'AutoSpa Bahrain serves Sanad with vehicle collection for ceramic coating, PPF & full detailing. 22 km to Budaiya workshop. Professional results for Sanad residents. Call +973 1759 5971.',
+    intro:
+      'AutoSpa Bahrain collects and returns vehicles for clients across Sanad, one of Bahrain\'s established central residential and light-industrial areas. At 22 km from our Budaiya workshop, we operate a structured collection-and-return service so that Sanad residents enjoy the same quality of service as our nearest neighbours. Our team collects from residential streets, villa complexes, and commercial properties in Sanad regularly for ceramic coating, PPF, and interior detailing bookings.',
+    distanceFromShop: '22 km from central Sanad via Shaikh Khalifa bin Salman Highway',
+    directions:
+      'From Sanad, head north on the main roads towards the Shaikh Khalifa bin Salman Highway (Highway 1). Take the highway heading north-west towards the Janabiya interchange. At the Janabiya interchange, exit onto the Budaiya Highway (Road 3504) heading west. Continue approximately 8 km along the Budaiya Highway until you see the Harley-Davidson showroom on the right. Turn right immediately after into the service road. AutoSpa Bahrain is the first workshop on that road — Building 18, Budaiya 505.',
+    localContext:
+      'Sanad is a mixed residential and light-industrial area in the Central Governorate, with a large population of Bahraini families and a significant number of workers employed in nearby industrial and commercial areas. The vehicle profile includes a broad range of mainstream Japanese and Korean models alongside traditional Bahraini preferences for large SUVs. Sanad\'s central Bahrain location means vehicles see significant daily mileage and highway exposure, making ceramic coating and paint protection particularly relevant for maintaining vehicle condition.',
+    servicesPopular: [
+      'ceramic-coating-bahrain',
+      'interior-detailing-bahrain',
+      'paint-protection-film-bahrain',
+      'professional-car-wash-bahrain',
+    ],
+    faqs: [
+      {
+        q: 'Do you offer vehicle collection from Sanad?',
+        a: 'Yes. We collect from Sanad for all major service bookings — ceramic coating, PPF, full showroom detail, and interior detailing. WhatsApp us on +973 1759 5971 with your Sanad address, vehicle type, and service required, and we will confirm a collection date and time. For smaller services, Sanad clients are also welcome to drop their vehicles directly at our Budaiya workshop.',
+      },
+      {
+        q: 'Is there a collection charge for Sanad?',
+        a: 'For major service bookings (ceramic coating, PPF, full showroom detail), we aim to include collection in the overall package. For smaller services (wash and polish, interior steam clean), a nominal collection fee may apply given the 22 km distance. We will always confirm the total inclusive price before you commit.',
+      },
+      {
+        q: 'How is AutoSpa Bahrain different from local car washes in Sanad?',
+        a: 'Local car washes in Sanad provide basic cleaning using roller brushes or general-purpose sponges that introduce micro-scratches with every wash. AutoSpa Bahrain uses a two-bucket hand wash method, foam pre-soak, and microfibre-only paint contact — producing a scratch-free result. For ceramic coating, PPF, and paint correction, AutoSpa Bahrain is the specialist facility — there is no comparable service locally in Sanad.',
+      },
+    ],
+  },
+
+  {
+    slug: 'car-detailing-sanabis',
+    name: 'Car Detailing Sanabis',
+    area: 'Sanabis',
+    metaTitle: 'Car Detailing Sanabis Bahrain | Ceramic Coating & PPF — AutoSpa Bahrain',
+    metaDescription:
+      'AutoSpa Bahrain serves Sanabis with vehicle collection for ceramic coating, PPF & luxury detailing. 16 km from Sanabis to our Budaiya workshop. Book on WhatsApp +973 1759 5971.',
+    intro:
+      'Sanabis, located between Seef and Manama, is one of AutoSpa Bahrain\'s well-served collection areas — 16 km from our Budaiya workshop via the main highway corridor. We collect from Sanabis residential compounds, hotels, and commercial buildings regularly, serving the area\'s mix of local Bahraini residents and expatriate professionals who demand a premium standard of vehicle care. Sanabis clients can expect the same collection reliability, communication, and quality of results as any other area we serve.',
+    distanceFromShop: '16 km from Sanabis via Sheikh Khalifa bin Salman Highway',
+    directions:
+      'From Sanabis, take the main road heading north-west towards the Sheikh Khalifa bin Salman Highway. Join the highway heading north-west. At the Janabiya interchange, exit onto the Budaiya Highway (Road 3504) heading west. Continue approximately 8 km along the Budaiya Highway. Pass the Harley-Davidson showroom on the right and turn right into the service road. AutoSpa Bahrain is the first workshop on that road — Building 18, Budaiya 505.',
+    localContext:
+      'Sanabis is a densely populated mixed residential and commercial district, adjacent to the Seef commercial strip and close to Bahrain\'s major retail centres. The area hosts a high proportion of expatriate professionals and Bahraini business owners, many of whom drive premium European and Japanese vehicles. Its proximity to the causeway approach and the commercial district means vehicles accumulate industrial dust, traffic exhaust deposits, and salt air contamination, making regular professional detailing and ceramic coating particularly effective for maintaining appearance.',
+    servicesPopular: [
+      'ceramic-coating-bahrain',
+      'paint-correction-bahrain',
+      'interior-detailing-bahrain',
+      'full-showroom-detail-bahrain',
+    ],
+    faqs: [
+      {
+        q: 'Do you collect from Sanabis for car detailing?',
+        a: 'Yes. We collect regularly from Sanabis residential and commercial addresses. WhatsApp us on +973 1759 5971 with your Sanabis address and service requirement and we will confirm a collection time. For ceramic coating, PPF, and full showroom detail bookings, collection is typically arranged for the morning of service start day.',
+      },
+      {
+        q: 'What is the most popular service for Sanabis residents?',
+        a: 'Ceramic coating and paint correction are most popular from Sanabis, reflecting the high proportion of BMW, Mercedes-Benz, and Audi models whose owners prioritise maintaining paint condition and gloss in a high-traffic, urban environment. Interior detailing is also in consistent demand for vehicles used in daily commuting that accumulate dust and odours quickly.',
+      },
+      {
+        q: 'How long does a ceramic coating take if I am in Sanabis?',
+        a: 'We collect your vehicle on day one, complete decontamination and paint correction on day one, apply the ceramic coating on day two, and return the vehicle to your Sanabis address on day two or three after curing. The entire process takes 2–3 days from collection to return delivery at your door.',
+      },
+    ],
+  },
+
+  {
+    slug: 'car-detailing-al-jasra',
+    name: 'Car Detailing Al Jasra',
+    area: 'Al Jasra',
+    metaTitle: 'Car Detailing Al Jasra Bahrain | Ceramic Coating & PPF — AutoSpa Bahrain',
+    metaDescription:
+      'AutoSpa Bahrain collects from Al Jasra for ceramic coating, PPF & full detailing. Just 6 km from our Budaiya workshop. Nearest professional detailing studio. WhatsApp +973 1759 5971.',
+    intro:
+      'Al Jasra is one of AutoSpa Bahrain\'s closest collection areas — just 6 km from our Budaiya workshop along the northern coastal road. This traditional village on the north-west coast is home to a community of long-established Bahraini families, many with a strong vehicle culture. The short distance means we can often arrange same-day or next-day collection and return for Al Jasra clients, and the journey from Al Jasra to our Budaiya workshop takes under 10 minutes.',
+    distanceFromShop: '6 km from Al Jasra via the Budaiya Highway',
+    directions:
+      'From Al Jasra, head east on the Budaiya Highway (Road 3504). Drive approximately 5 km towards Budaiya. The Harley-Davidson showroom will appear on the left side. Turn left immediately after the showroom into the service road. AutoSpa Bahrain is the first workshop on that road — Building 18, Budaiya 505. The drive from Al Jasra takes approximately 7–10 minutes.',
+    localContext:
+      'Al Jasra is a coastal village in the Northern Governorate, renowned for its traditional Bahraini heritage, the Shaikh Isa bin Ali Al Khalifa House museum, and its proximity to the northern coast. The village has a strong traditional identity, and many Al Jasra residents own large SUVs and traditional Arab vehicles — Toyota Land Cruiser, Nissan Patrol, GMC Yukon — alongside a newer generation of vehicles from younger residents. The coastal location means salt air and wind-blown sand from the Gulf are significant paint degradation factors for Al Jasra vehicles.',
+    servicesPopular: [
+      'ceramic-coating-bahrain',
+      'paint-protection-film-bahrain',
+      'interior-detailing-bahrain',
+      'professional-car-wash-bahrain',
+    ],
+    faqs: [
+      {
+        q: 'Is AutoSpa Bahrain the nearest professional detailing studio to Al Jasra?',
+        a: 'Yes. At 6 km and approximately 8 minutes by road, AutoSpa Bahrain in Budaiya is the closest professional detailing studio to Al Jasra offering ceramic coating, PPF, and Authorized Zymöl detailing. Al Jasra has no comparable specialist facility closer.',
+      },
+      {
+        q: 'Do you collect from Al Jasra, and is there a fee?',
+        a: "Given the short 6 km distance, Al Jasra collection is routinely free for most major service bookings. For smaller services, we can discuss arrangements. WhatsApp us on +973 1759 5971 — Al Jasra is one of our easiest collection areas given the proximity.",
+      },
+      {
+        q: 'How does salt air from the coast affect my car\'s paint?',
+        a: "Coastal salt air causes gradual paint degradation by depositing chloride compounds on the clear coat surface, accelerating oxidation and micro-etching when left unwashed. For Al Jasra vehicles parked outdoors or near the coast, a ceramic coating provides the most effective defence — its hydrophobic surface causes salt water to bead and run off rather than sitting on the paint, significantly slowing deterioration. Regular washing (every 2–3 weeks) is also important for salt-air exposed vehicles.",
+      },
+    ],
+  },
+
+  {
+    slug: 'car-detailing-isa-town',
+    name: 'Car Detailing Isa Town',
+    area: 'Isa Town',
+    metaTitle: 'Car Detailing Isa Town Bahrain | Ceramic Coating & PPF — AutoSpa Bahrain',
+    metaDescription:
+      'AutoSpa Bahrain collects from Isa Town for ceramic coating, PPF & luxury car detailing. 28 km to Budaiya workshop. Full collection-and-return service. Book on WhatsApp +973 1759 5971.',
+    intro:
+      'AutoSpa Bahrain provides collection-and-return car detailing for clients in Isa Town, a planned residential city in the central governorate. At 28 km from our Budaiya workshop, Isa Town is at the outer edge of our regular collection zone, but we serve it consistently for major service bookings — ceramic coating, PPF, and full showroom details — where the service value justifies the collection logistics. We operate a transparent, pre-quoted pricing model so Isa Town clients always know the total cost inclusive of collection before confirming.',
+    distanceFromShop: '28 km from Isa Town via Shaikh Khalifa bin Salman Highway',
+    directions:
+      'From Isa Town, take the main road heading north to connect to the Shaikh Khalifa bin Salman Highway (Highway 1). Head north-west on the highway. At the Janabiya interchange, exit onto the Budaiya Highway (Road 3504) heading west. Continue approximately 8 km along the Budaiya Highway. Pass the Harley-Davidson showroom on the right and turn right into the service road. AutoSpa Bahrain is the first workshop on that road — Building 18, Budaiya 505. The drive from Isa Town takes approximately 30–40 minutes.',
+    localContext:
+      'Isa Town was developed in the 1960s as a planned residential city and remains one of Bahrain\'s major population centres, with a predominantly Bahraini residential character and a wide range of vehicle types. Large SUVs (Land Cruiser, Patrol, Suburban) dominate, alongside a younger generation of buyers favouring Korean and European models. The central location and longer commute distances mean vehicles accumulate highway stone chip damage and dust contamination consistently, making regular detailing and protective coatings a worthwhile investment.',
+    servicesPopular: [
+      'ceramic-coating-bahrain',
+      'full-showroom-detail-bahrain',
+      'paint-protection-film-bahrain',
+      'interior-detailing-bahrain',
+    ],
+    faqs: [
+      {
+        q: 'Do you collect from Isa Town for car detailing?',
+        a: 'Yes, with advance booking. Isa Town is at 28 km from our Budaiya workshop, so we book Isa Town collections on a scheduled basis rather than same-day. WhatsApp us on +973 1759 5971 with at least 48 hours notice, your Isa Town address, and the service required, and we will confirm a collection date. We quote the total price inclusive of collection before you commit.',
+      },
+      {
+        q: 'Is there a collection fee for Isa Town?',
+        a: 'For major bookings — ceramic coating, PPF, and full showroom detail — we typically include collection in the service package. For smaller services, a nominal logistics fee may apply. We always provide a fully inclusive quote before confirming, so there are no surprises.',
+      },
+      {
+        q: 'Are there any ceramic coating specialists in Isa Town?',
+        a: "Isa Town has general car wash facilities, but no specialist ceramic coating, PPF, or Authorized Zymöl detailing centre. AutoSpa Bahrain in Budaiya is the recommended specialist for Isa Town clients requiring professional-grade paint protection. Our collection service is specifically designed to bridge the distance gap for clients in central and southern Bahrain.",
+      },
+    ],
+  },
+
+  {
+    slug: 'car-detailing-muharraq',
+    name: 'Car Detailing Muharraq',
+    area: 'Muharraq',
+    metaTitle: 'Car Detailing Muharraq Bahrain | Ceramic Coating & PPF — AutoSpa Bahrain',
+    metaDescription:
+      'AutoSpa Bahrain collects from Muharraq for ceramic coating, PPF & full car detailing. 25 km to Budaiya. Trusted by Muharraq car owners. WhatsApp +973 1759 5971 to book.',
+    intro:
+      "AutoSpa Bahrain provides collection-and-return car detailing services for clients in Muharraq, Bahrain's second city and the island home to Bahrain International Airport. At 25 km from our Budaiya workshop, Muharraq is one of our furthest regular collection areas, but the demand from the island's large and vehicle-proud Bahraini community makes it a well-established part of our service territory. We collect for ceramic coating, PPF, and full detailing bookings from across Muharraq — including the historic centre, Arad, and the newer developments adjacent to the airport.",
+    distanceFromShop: '25 km from central Muharraq via Shaikh Isa bin Salman Causeway',
+    directions:
+      "From Muharraq, cross to the main island of Bahrain via the Shaikh Isa bin Salman Causeway. Take the main road heading north-west towards Manama and then onto the Shaikh Khalifa bin Salman Highway (Highway 1). At the Janabiya interchange, exit onto the Budaiya Highway (Road 3504) heading west. Continue approximately 8 km along the Budaiya Highway. The Harley-Davidson showroom will appear on the right. Turn right immediately after into the service road. AutoSpa Bahrain is the first workshop on that road — Building 18, Budaiya 505. The drive from central Muharraq takes approximately 30–35 minutes.",
+    localContext:
+      "Muharraq is one of Bahrain's oldest and most historically significant cities, home to a large and proud Bahraini community with a deep vehicle culture. Toyota Land Cruiser ownership in Muharraq is extremely high, alongside Nissan Patrol and GMC Yukon. Muharraq's location on an island separated from the main island by a causeway means vehicles are exposed to salt air from all directions — one of the most corrosive environments for paintwork in Bahrain. Ceramic coating is particularly effective for Muharraq vehicles given the constant salt-air exposure, and PPF on high-impact areas protects against the stone chip damage accumulated on highway crossings.",
+    servicesPopular: [
+      'ceramic-coating-bahrain',
+      'paint-protection-film-bahrain',
+      'full-showroom-detail-bahrain',
+      'interior-detailing-bahrain',
+    ],
+    faqs: [
+      {
+        q: 'Do you collect from Muharraq for detailing?',
+        a: "Yes. We collect from Muharraq on a scheduled basis for major service bookings. Given the 25 km distance and causeway crossing, we recommend booking at least 48–72 hours in advance. WhatsApp us on +973 1759 5971 with your Muharraq address and service requirement. We provide a fully inclusive quote — service plus collection — before confirming.",
+      },
+      {
+        q: 'Why is ceramic coating especially important for Muharraq vehicles?',
+        a: "Muharraq is an island surrounded by the Gulf, meaning vehicles are exposed to salt air from all sides. Salt air deposits chloride compounds on paint surfaces that accelerate oxidation and micro-etching of the clear coat. A 9H ceramic coating provides a hydrophobic barrier that repels salt-laden moisture, making it run off rather than sitting on the paint surface. For vehicles garaged outdoors in Muharraq, ceramic coating is the single most effective way to slow paint degradation caused by the coastal environment.",
+      },
+      {
+        q: 'How long will my car be away for a ceramic coating from Muharraq?',
+        a: "We collect on day one, complete decontamination and paint correction on day one, apply the ceramic coating on day two, and return the vehicle to your Muharraq address on day two or day three after curing. Total away time is typically 2–3 days. We keep you updated throughout via WhatsApp.",
+      },
+    ],
+  },
+
+  {
+    slug: 'car-detailing-manama-center',
+    name: 'Car Detailing Manama Center',
+    area: 'Manama Center',
+    metaTitle: 'Car Detailing Manama Center Bahrain | Ceramic Coating & PPF — AutoSpa Bahrain',
+    metaDescription:
+      'AutoSpa Bahrain collects from Manama Center for ceramic coating, PPF & luxury car detailing. 20 km from central Manama. Diplomatic Area & Old Manama served. WhatsApp +973 1759 5971.',
+    intro:
+      'AutoSpa Bahrain provides full collection-and-return car detailing for clients in Manama Center — including the Diplomatic Area, Government Avenue, Gudaibiya, and the historic commercial heart of Bahrain. At 20 km from our Budaiya workshop, central Manama clients benefit from our structured collection service that fits neatly around corporate work schedules. We collect from office buildings, government facilities, hotel car parks, and residential buildings across the capital\'s commercial core.',
+    distanceFromShop: '20 km from central Manama via Budaiya Highway',
+    directions:
+      'From central Manama or the Diplomatic Area, take King Faisal Highway heading west. Connect to the Shaikh Khalifa bin Salman Highway (Highway 1) heading north-west. At the Janabiya interchange, exit onto the Budaiya Highway (Road 3504) heading west. Continue approximately 8 km along the Budaiya Highway. Pass the Harley-Davidson showroom on the right. Turn right immediately after into the service road. AutoSpa Bahrain is the first workshop on that road — Building 18, Budaiya 505. The drive from Manama Center takes approximately 25–30 minutes.',
+    localContext:
+      "Manama Center is the political, diplomatic, and commercial heart of Bahrain — home to government ministries, the Diplomatic Quarter, international hotel towers, and Bahrain's oldest commercial district. The vehicle population is correspondingly diverse and premium: diplomatic fleets of armoured BMW 7 Series and Mercedes-Benz S-Class, corporate executive cars from the financial district, and a large number of high-end private vehicles owned by senior government officials and business leaders. The urban environment with construction activity, road works, and industrial port proximity creates a combination of dust, chemical fallout, and stone chip exposure that makes professional paint care a priority for high-value vehicles in the capital.",
+    servicesPopular: [
+      'ceramic-coating-bahrain',
+      'zymol-luxury-detailing-bahrain',
+      'interior-detailing-bahrain',
+      'paint-correction-bahrain',
+    ],
+    faqs: [
+      {
+        q: 'Can you collect from the Diplomatic Area or Government buildings in Manama?',
+        a: 'Yes. We collect from the Diplomatic Area, office buildings along Government Avenue, hotel car parks, and residential buildings throughout Manama Center. For secure facilities, we ask you to arrange visitor/contractor parking access in advance. WhatsApp us on +973 1759 5971 with the address, access instructions, and preferred collection time.',
+      },
+      {
+        q: 'Do you service diplomatic vehicles in Manama?',
+        a: 'Yes. We handle diplomatic and official vehicles with full discretion and professionalism. Our collection-and-return service means the vehicle does not need to be taken off your premises during business hours — we work around your schedule. We are experienced with the full range of diplomatic vehicle types including armoured and heavy saloons.',
+      },
+      {
+        q: 'What is the most popular service for Manama Center clients?',
+        a: "Ceramic coating on high-value executive vehicles is the most frequently booked service from Manama Center — driven by the premium vehicle profile and the Diplomatic Area's proximity to the port and construction dust corridors. Zymöl luxury detailing is also popular among clients with concours-condition or collector vehicles who want the highest level of cosmetic care available in Bahrain.",
       },
     ],
   },

@@ -17,6 +17,8 @@ export const BUSINESS = {
   phone: {
     primary: '+97317595971',
     primaryDisplay: '+973 1759 5971',
+    secondary: '+97333606113',
+    secondaryDisplay: '+973 3360 6113',
     whatsapp: '+97317595971',
     whatsappDisplay: '+973 1759 5971',
   },
@@ -35,21 +37,19 @@ export const BUSINESS = {
       close: '20:00',
       dayOfWeek: ['Sa', 'Su', 'Mo', 'Tu', 'We', 'Th'] as const,
     },
-    {
-      days: ['Friday'] as const,
-      open: '14:00',
-      close: '20:00',
-      dayOfWeek: ['Fr'] as const,
-    },
   ],
-  openingHoursDisplay: 'Sat–Thu: 9 AM – 8 PM  |  Fri: 2 PM – 8 PM',
+  openingHoursDisplay: 'Mon–Thu & Sat–Sun: 9 AM – 8 PM  |  Friday: Closed',
   url: 'https://autospabahrainwll.com',
   mapDirections:
     'https://www.google.com/maps/dir/?api=1&destination=Building+18+Road+54+Budaiya+505+Bahrain',
   mapEmbed:
     'https://maps.google.com/maps?q=AutoSpa+Bahrain+Budaiya+Bahrain&output=embed&z=16',
   zymolAuthorized: true,
-  sameAs: [] as string[],
+  sameAs: [
+    'https://www.facebook.com/autospabahrain/',
+    'https://www.instagram.com/autospabahrain/',
+    'https://www.linkedin.com/company/autospa-bahrain-w-l-l-',
+  ],
 } as const
 
 export const SERVICE_AREAS = [

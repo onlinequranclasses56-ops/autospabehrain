@@ -1,12 +1,13 @@
 import Image from 'next/image'
 import Logo from './Logo'
 import { BUSINESS, WHATSAPP } from '@/lib/constants'
-import { MessageCircle, Phone, MapPin, Clock, ShieldCheck } from 'lucide-react'
+import { MessageCircle, Phone, MapPin, Clock, ShieldCheck, Facebook, Instagram, Linkedin } from 'lucide-react'
 
 // ── Topical map: every service as a crawlable pillar page link ────────────────
 const SERVICE_LINKS = [
   { label: 'Paint Protection Film (PPF) Bahrain', href: '/paint-protection-film-bahrain' },
   { label: '9H Ceramic Coating Bahrain', href: '/ceramic-coating-bahrain' },
+  { label: 'Window Tinting Bahrain', href: '/window-tinting-bahrain' },
   { label: 'Zymöl Luxury Car Detailing', href: '/zymol-luxury-detailing-bahrain' },
   { label: 'Interior Steam Clean & Leather Care', href: '/interior-detailing-bahrain' },
   { label: 'Full Showroom Detail Bahrain', href: '/full-showroom-detail-bahrain' },
@@ -21,6 +22,8 @@ const AREA_LINKS = [
   { label: 'Car Detailing Riffa', href: '/car-detailing-riffa' },
   { label: 'Car Detailing Manama', href: '/car-detailing-manama' },
   { label: 'Car Detailing Hamala', href: '/car-detailing-hamala' },
+  { label: "Car Detailing A'ali", href: '/car-detailing-aali' },
+  { label: 'Car Detailing Muharraq', href: '/car-detailing-muharraq' },
 ] as const
 
 // ── Site architecture: key sections for crawl depth + UX ─────────────────────
@@ -86,6 +89,37 @@ export default function Footer() {
                 <span>Registered in Bahrain · W.L.L. (CR No. Bahrain)</span>
               </li>
             </ul>
+
+            {/* Social links */}
+            <div className="mt-5 flex items-center gap-3" aria-label="AutoSpa Bahrain social media">
+              <a
+                href="https://www.facebook.com/autospabahrain/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="AutoSpa Bahrain on Facebook"
+                className="flex h-8 w-8 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-zinc-500 transition-colors hover:border-accent-gold/40 hover:text-accent-gold"
+              >
+                <Facebook className="h-3.5 w-3.5" aria-hidden />
+              </a>
+              <a
+                href="https://www.instagram.com/autospabahrain/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="AutoSpa Bahrain on Instagram"
+                className="flex h-8 w-8 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-zinc-500 transition-colors hover:border-accent-gold/40 hover:text-accent-gold"
+              >
+                <Instagram className="h-3.5 w-3.5" aria-hidden />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/autospa-bahrain-w-l-l-"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="AutoSpa Bahrain on LinkedIn"
+                className="flex h-8 w-8 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-zinc-500 transition-colors hover:border-accent-gold/40 hover:text-accent-gold"
+              >
+                <Linkedin className="h-3.5 w-3.5" aria-hidden />
+              </a>
+            </div>
           </div>
 
           {/* Col 2 — Services (topical map pillar links) */}
