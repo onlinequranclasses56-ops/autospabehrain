@@ -1,0 +1,18 @@
+{
+  "framework": "nextjs",
+  "regions": ["fra1"],
+  "buildCommand": "npm run build",
+  "installCommand": "npm install",
+  "redirects": [
+    { "source": "/services/:path*", "destination": "/:path*", "permanent": true },
+    { "source": "/locations/:path*", "destination": "/:path*", "permanent": true },
+    { "source": "/services",         "destination": "/",       "permanent": true },
+    { "source": "/locations",        "destination": "/",       "permanent": true }
+  ],
+  "headers": [
+    {
+      "source": "/a9f3c2e8b5d71650e2c4f8a3b7d9e1c4.txt",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=86400" }]
+    }
+  ]
+}
