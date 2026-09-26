@@ -1,5 +1,3 @@
-import { createClient } from '@supabase/supabase-js'
-
 export type BookingStatus = 'new' | 'confirmed' | 'in_progress' | 'completed' | 'cancelled'
 
 export interface Booking {
@@ -20,8 +18,3 @@ export interface Booking {
 }
 
 export type BookingInsert = Omit<Booking, 'id' | 'created_at' | 'status'>
-
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-
-export const supabase = createClient(supabaseUrl, supabaseAnonKey)

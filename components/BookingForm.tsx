@@ -84,20 +84,24 @@ export default function BookingForm({ defaultSlug = '' }: { defaultSlug?: string
     setError('')
 
     start(async () => {
-      const result = await submitBooking({
-        service_slug:      f.serviceSlug as string,
-        service_name:      service.label,
-        vehicle_make:      f.vehicleMake.trim(),
-        vehicle_model:     f.vehicleModel.trim(),
-        preferred_date:    f.preferredDate,
-        preferred_time:    'Flexible',
-        customer_name:     f.customerName.trim(),
-        customer_whatsapp: f.customerWhatsapp.trim(),
-        customer_notes:    f.customerNotes.trim() || undefined,
-      })
+      try {
+        const result = await submitBooking({
+          service_slug:      f.serviceSlug as string,
+          service_name:      service.label,
+          vehicle_make:      f.vehicleMake.trim(),
+          vehicle_model:     f.vehicleModel.trim(),
+          preferred_date:    f.preferredDate,
+          preferred_time:    'Flexible',
+          customer_name:     f.customerName.trim(),
+          customer_whatsapp: f.customerWhatsapp.trim(),
+          customer_notes:    f.customerNotes.trim() || undefined,
+        })
 
-      if (!result.success) {
-        setError(result.error ?? 'Could not save to database.')
+        if (!result.success) {
+          setError(result.error ?? 'Could not save to database.')
+        }
+      } catch (err) {
+        setError(err instanceof Error ? err.message : 'Network error — please try WhatsApp directly.')
       }
 
       setSub(true)
@@ -121,10 +125,15 @@ export default function BookingForm({ defaultSlug = '' }: { defaultSlug?: string
           </p>
         </div>
         {error && (
-          <p className="flex items-center gap-1.5 text-xs text-amber-400">
-            <AlertCircle className="h-3.5 w-3.5 shrink-0" />
-            Note: database save failed ({error}), but your WhatsApp booking still works.
-          </p>
+          <div className="w-full rounded-xl border border-red-500/40 bg-red-500/10 p-4 text-left">
+            <div className="mb-1 flex items-center gap-2 font-semibold text-red-400">
+              <AlertCircle className="h-4 w-4 shrink-0" />
+              Booking not saved to system
+            </div>
+            <p className="text-xs text-red-300/80">
+              {error}. Your WhatsApp message below still works — please send it so we can confirm manually.
+            </p>
+          </div>
         )}
         <a
           href={waUrl}
