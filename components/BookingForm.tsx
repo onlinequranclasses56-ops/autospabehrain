@@ -1,8 +1,8 @@
 'use client'
 
-import { useState, useTransition } from 'react'
+import { useState } from 'react'
+import { createClient } from '@supabase/supabase-js'
 import { Check, MessageCircle, Loader2, AlertCircle } from 'lucide-react'
-import { submitBooking } from '@/lib/actions/booking'
 import { BUSINESS } from '@/lib/constants'
 
 const SERVICES = [
@@ -58,11 +58,11 @@ function buildWhatsAppMsg(f: Fields, serviceName: string) {
 }
 
 export default function BookingForm({ defaultSlug = '' }: { defaultSlug?: string }) {
-  const [f, setF]           = useState<Fields>({ ...EMPTY, serviceSlug: defaultSlug as ServiceSlug | '' })
+  const [f, setF]          = useState<Fields>({ ...EMPTY, serviceSlug: defaultSlug as ServiceSlug | '' })
   const [submitted, setSub] = useState(false)
-  const [waUrl, setWaUrl]   = useState('')
-  const [isPending, start]  = useTransition()
-  const [error, setError]   = useState('')
+  const [waUrl, setWaUrl]  = useState('')
+  const [loading, setLoad] = useState(false)
+  const [error, setError]  = useState('')
 
   const set = (k: keyof Fields, v: string) => setF((prev) => ({ ...prev, [k]: v }))
 
@@ -74,38 +74,47 @@ export default function BookingForm({ defaultSlug = '' }: { defaultSlug?: string
     f.customerName.trim().length > 0 &&
     f.customerWhatsapp.trim().length > 6
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    if (!isValid || isPending) return
+    if (!isValid || loading) return
 
     const service = SERVICES.find((s) => s.slug === f.serviceSlug)!
     const msg     = buildWhatsAppMsg(f, service.label)
-    setWaUrl(`${BUSINESS.whatsapp.baseUrl}?text=${encodeURIComponent(msg)}`)
+    const wa      = `${BUSINESS.whatsapp.baseUrl}?text=${encodeURIComponent(msg)}`
+    setWaUrl(wa)
     setError('')
+    setLoad(true)
 
-    start(async () => {
-      try {
-        const result = await submitBooking({
-          service_slug:      f.serviceSlug as string,
-          service_name:      service.label,
-          vehicle_make:      f.vehicleMake.trim(),
-          vehicle_model:     f.vehicleModel.trim(),
-          preferred_date:    f.preferredDate,
-          preferred_time:    'Flexible',
-          customer_name:     f.customerName.trim(),
-          customer_whatsapp: f.customerWhatsapp.trim(),
-          customer_notes:    f.customerNotes.trim() || undefined,
-        })
+    try {
+      const supabase = createClient(
+        process.env.NEXT_PUBLIC_SUPABASE_URL!,
+        process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+      )
 
-        if (!result.success) {
-          setError(result.error ?? 'Could not save to database.')
-        }
-      } catch (err) {
-        setError(err instanceof Error ? err.message : 'Network error — please try WhatsApp directly.')
+      const { error: dbErr } = await supabase.from('bookings').insert({
+        service_slug:      f.serviceSlug,
+        service_name:      service.label,
+        vehicle_make:      f.vehicleMake.trim(),
+        vehicle_model:     f.vehicleModel.trim(),
+        preferred_date:    f.preferredDate,
+        preferred_time:    'Flexible',
+        customer_name:     f.customerName.trim(),
+        customer_whatsapp: f.customerWhatsapp.trim(),
+        customer_notes:    f.customerNotes.trim() || undefined,
+      })
+
+      if (dbErr) {
+        console.error('[AutoSpa] booking insert:', dbErr.message)
+        setError(dbErr.message)
       }
-
+    } catch (err) {
+      const msg2 = err instanceof Error ? err.message : 'Network error'
+      console.error('[AutoSpa] booking error:', msg2)
+      setError(msg2)
+    } finally {
+      setLoad(false)
       setSub(true)
-    })
+    }
   }
 
   /* ── Success screen ────────────────────────────────────────────── */
@@ -260,10 +269,10 @@ export default function BookingForm({ defaultSlug = '' }: { defaultSlug?: string
       {/* Submit */}
       <button
         type="submit"
-        disabled={!isValid || isPending}
+        disabled={!isValid || loading}
         className="flex w-full items-center justify-center gap-2 rounded-xl bg-accent-gold py-3.5 text-sm font-bold text-black shadow-lg shadow-accent-gold/15 transition hover:bg-accent-gold-light disabled:cursor-not-allowed disabled:opacity-40"
       >
-        {isPending ? (
+        {loading ? (
           <><Loader2 className="h-4 w-4 animate-spin" /> Submitting…</>
         ) : (
           <><MessageCircle className="h-4 w-4" /> Confirm Booking via WhatsApp</>
