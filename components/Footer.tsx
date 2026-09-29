@@ -234,6 +234,20 @@ export default function Footer() {
               &copy; {new Date().getFullYear()} {BUSINESS.legalName}. All rights reserved.
             </p>
           </div>
+
+          {/* Trusted Partners */}
+          <div className="mt-4 border-t border-white/4 pt-4 text-center">
+            <span className="text-xs text-zinc-700">Trusted Partner: </span>
+            <a
+              href="https://www.veharicarwashanddetailingservices.com"
+              target="_blank"
+              rel="noopener"
+              title="Vehari Car Wash and Detailing Services"
+              className="text-xs text-zinc-600 transition-colors hover:text-zinc-400"
+            >
+              Vehari Car Wash and Detailing Services
+            </a>
+          </div>
         </div>
 
       </div>
