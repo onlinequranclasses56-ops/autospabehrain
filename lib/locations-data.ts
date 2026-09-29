@@ -130,9 +130,9 @@ export const LOCATIONS_DATA: LocationData[] = [
     slug: 'car-detailing-riffa',
     name: 'Car Detailing Riffa',
     area: 'Riffa',
-    metaTitle: 'Car Detailing Riffa Bahrain | Ceramic Coating & PPF, Free Collection',
+    metaTitle: 'Car Detailing Riffa Bahrain | Free Collection — Ceramic Coating & PPF',
     metaDescription:
-      'AutoSpa Bahrain collects from Riffa for ceramic coating, PPF & full detailing. 25 km, free collection service for all Riffa areas. Trusted by Land Cruiser & BMW owners in Riffa.',
+      'Car detailing in Riffa, Bahrain. AutoSpa Bahrain collects from all Riffa areas — ceramic coating, PPF, paint correction & showroom detail. Free collection. AutoSpa Bahrain, Budaiya — WhatsApp to book.',
     intro:
       'AutoSpa Bahrain regularly collects vehicles from across Riffa — East Riffa, West Riffa, Riffa Views, and Al Hajiyat — for professional detailing services at our Budaiya workshop. At 25 km from central Riffa, we operate a structured collection-and-return service so that Riffa clients experience the same seamless service as those closer to Budaiya. Many of our most loyal clients are Riffa residents who have been bringing their vehicles to us for 5–10 years, drawn initially by our Zymöl authorization and returning for ceramic coating and PPF as their vehicles have changed.',
     distanceFromShop: '25 km from central Riffa via Shaikh Khalifa bin Salman Highway',
@@ -166,9 +166,9 @@ export const LOCATIONS_DATA: LocationData[] = [
     slug: 'car-detailing-manama',
     name: 'Car Detailing Manama',
     area: 'Manama',
-    metaTitle: 'Car Detailing Manama Bahrain | Ceramic Coating & PPF, AutoSpa Budaiya',
+    metaTitle: 'Car Detailing Manama Bahrain | Free Collection — Ceramic Coating & PPF',
     metaDescription:
-      'AutoSpa Bahrain serves Manama with full vehicle collection for ceramic coating, PPF & luxury detailing. 18 km from the capital. Trusted by Manama business district car owners.',
+      'Car detailing in Manama, Bahrain. AutoSpa Bahrain collects from Manama — ceramic coating from BHD 150, PPF, paint correction & full showroom detail. Free collection. WhatsApp +973 1759 5971 to book.',
     intro:
       'AutoSpa Bahrain provides full collection-and-return vehicle detailing for clients across Manama — from the Diplomatic Area and Manama Center to Juffair, Adliya, and the capital\'s business district. At 18 km from central Manama via the Budaiya Highway, we serve Manama\'s high concentration of corporate professionals, embassy staff, and business owners who demand premium results and flexible scheduling to fit around demanding working hours.',
     distanceFromShop: '18 km from central Manama via Budaiya Highway',
@@ -202,9 +202,9 @@ export const LOCATIONS_DATA: LocationData[] = [
     slug: 'car-detailing-hamala',
     name: 'Car Detailing Hamala',
     area: 'Hamala',
-    metaTitle: 'Car Detailing Hamala Bahrain | Ceramic Coating & PPF Near Hamala',
+    metaTitle: 'Car Detailing Hamala Bahrain | Free Collection — Ceramic Coating & PPF',
     metaDescription:
-      'AutoSpa Bahrain is just 8 km from Hamala. Ceramic coating, PPF & Zymöl detailing for European car owners in Hamala. Free collection. Book on WhatsApp +973 1759 5971.',
+      'Car detailing in Hamala, Bahrain. AutoSpa Bahrain is 8 km from Hamala — free collection for ceramic coating, PPF, Zymöl detailing & paint correction. WhatsApp +973 1759 5971 to book today.',
     intro:
       'Hamala is one of AutoSpa Bahrain\'s closest client communities outside Budaiya itself — just 8 km from our workshop via the Janabiya road. The village and its surrounding residential areas are home to a substantial expatriate community, many from Europe, who frequently bring their vehicles to us for services they recognise from back home: ceramic coating, PPF, and concours-grade Zymöl detailing. For Hamala residents, collection is straightforward and return is usually the same day or the following morning for most services.',
     distanceFromShop: '8 km from Hamala via Janabiya Road and Budaiya Highway',

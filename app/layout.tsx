@@ -17,35 +17,35 @@ const cinzel = Cinzel({
   display: 'swap',
 })
 
-const META_TITLE = 'AutoSpa Bahrain | Ceramic Coating, PPF & Luxury Detailing in Budaiya'
+const META_TITLE = 'Car Detailing Bahrain | Ceramic Coating, PPF & Auto Detailing — AutoSpa'
 const META_DESCRIPTION =
-  "Bahrain's premier automotive spa in Budaiya. Authorized Zymöl detailer & PPF specialist serving Saar, Seef, Riffa, Hamala & across Bahrain. Call +973 1759 5971 to book."
+  'Best car detailing in Bahrain. 9H ceramic coating from BHD 150, PPF, window tinting & full showroom detail at AutoSpa Bahrain, Budaiya. Free collection from Manama, Riffa & Seef. Call +973 1759 5971.'
 
 export const metadata: Metadata = {
   title: META_TITLE,
   description: META_DESCRIPTION,
   applicationName: BUSINESS.name,
   keywords: [
-    'ceramic coating Bahrain',
-    'PPF Budaiya',
-    'paint protection film Bahrain',
     'car detailing Bahrain',
-    'Zymöl detailer Bahrain',
-    'auto detailing Seef',
-    'ceramic coating Saar',
-    'car polish Riffa',
-    'detailing Hamala',
-    'PPF Saar Bahrain',
-    'car spa Budaiya',
-    'automotive detailing Manama',
-    'car detailing Budaiya',
-    'ceramic coating Budaiya',
-    'auto spa Bahrain',
+    'ceramic coating Bahrain',
+    'PPF Bahrain',
+    'paint protection film Bahrain',
+    'window tinting Bahrain',
+    'car tinting Bahrain',
+    'nano ceramic Bahrain',
+    'car polishing Bahrain',
+    'interior car detailing Bahrain',
+    'auto detailing Bahrain',
+    'car wash Bahrain',
     'paint correction Bahrain',
-    'interior detailing Bahrain',
-    'car wrap Bahrain',
+    'car detailing near me Bahrain',
+    'Zymöl detailer Bahrain',
+    'auto spa Bahrain',
+    'car detailing Budaiya',
+    'car detailing Manama',
+    'car detailing Riffa',
+    'car detailing Seef',
     'autospabahrain',
-    'autospabahrainwll',
   ],
   authors: [{ name: BUSINESS.legalName, url: BUSINESS.url }],
   creator: BUSINESS.legalName,

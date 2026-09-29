@@ -67,14 +67,21 @@ export default function SchemaOrg() {
     paymentAccepted: 'Cash, Credit Card, Debit Card, Bank Transfer',
     currenciesAccepted: 'BHD',
     knowsAbout: [
+      'Car Detailing Bahrain',
       'Ceramic Coating',
+      'Nano Ceramic Coating',
       'Paint Protection Film (PPF)',
+      'Window Tinting',
+      'Car Window Tinting',
       'Zymöl Luxury Detailing',
       'Paint Correction',
       'Interior Car Detailing',
       'Car Valeting',
       'Automotive Detailing',
       'Machine Polish',
+      'Car Polishing',
+      'Vinyl Wrapping',
+      'Headlight Restoration',
     ],
     address: {
       '@type': 'PostalAddress',
@@ -143,9 +150,36 @@ export default function SchemaOrg() {
           '@type': 'Offer',
           itemOffered: {
             '@type': 'Service',
-            name: 'Premium Wash & Machine Polish',
+            name: 'Window Tinting',
             description:
-              'Hand wash, clay bar decontamination, and machine polish to restore paintwork clarity and gloss.',
+              'Professional car window tinting with ceramic, carbon, and dyed films. UV and heat rejection. Legal VLT compliance for Bahrain.',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Paint Correction & Machine Polish',
+            description:
+              'Single and multi-stage paint correction removing swirl marks, water spots, and oxidation. Prepares paintwork for ceramic coating or PPF.',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Professional Car Wash',
+            description:
+              'Two-bucket hand wash with pH-neutral shampoo, foam cannon pre-soak, and microfibre drying. Safe for ceramic-coated and detailed vehicles.',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Vinyl Wrapping',
+            description:
+              'Full colour change, partial, bonnet, and roof wraps using premium cast vinyl films. Gloss, matte, satin, and carbon texture finishes.',
           },
         },
       ],

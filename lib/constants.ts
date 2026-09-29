@@ -117,4 +117,19 @@ export const FAQ_ITEMS = [
     answer:
       'We accept cash in Bahraini Dinar (BHD), debit and credit cards (Visa/Mastercard), and bank transfer. Payment is due on collection of the vehicle. A deposit may be required for bookings involving imported PPF film or specialist materials.',
   },
+  {
+    question: 'Is nano ceramic coating available in Bahrain and how long does it last?',
+    answer:
+      'Yes — AutoSpa Bahrain installs professional 9H nano ceramic coating, which is the same product commonly searched as "nano ceramic coating in Bahrain." Nano ceramic and ceramic coating are the same technology: SiO₂ nanoparticles that bond chemically to your car\'s clear coat. Our professional-grade nano ceramic coating lasts a minimum of 2 years under Bahrain\'s extreme UV and heat conditions, with many clients achieving 3–4 years through correct maintenance. Consumer spray-on "nano ceramic" products available in shops do not achieve the same bond strength or durability. Call or WhatsApp us on +973 1759 5971 for a quote.',
+  },
+  {
+    question: 'Where can I get professional car window tinting near me in Bahrain?',
+    answer:
+      'AutoSpa Bahrain provides professional car window tinting from our Budaiya workshop, and we offer free vehicle collection from Manama, Riffa, Seef, Saar, Hamala, and all areas of Bahrain. We install ceramic, carbon, and dyed window tint films — all within Bahrain legal VLT limits. Car tinting starts from BHD 60 for a saloon. WhatsApp us on +973 1759 5971 to arrange collection and confirm pricing for your vehicle.',
+  },
+  {
+    question: 'How much does car polishing cost near me in Bahrain?',
+    answer:
+      'Professional paint correction and machine polishing at AutoSpa Bahrain starts from BHD 80 for a sedan (single-stage correction) and BHD 120 for an SUV. Multi-stage correction for severe swirl marks or oxidation starts from BHD 150. We offer free collection from across Bahrain, so you do not need to drive to our Budaiya workshop. Car polishing removes swirl marks, water spots, and paint defects that accumulate rapidly in Bahrain\'s conditions. WhatsApp +973 1759 5971 to book.',
+  },
 ] as const

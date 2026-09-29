@@ -6,14 +6,14 @@ import { BUSINESS } from '@/lib/constants'
 import { ShieldCheck, Clock, MapPin } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Book Car Detailing Bahrain | AutoSpa Bahrain W.L.L.',
+  title: 'Book Car Detailing Bahrain — Free Collection | Confirm in 1 Hour | AutoSpa',
   description:
-    'Book ceramic coating, PPF, window tinting, or car detailing in Bahrain. Simple online form — we confirm within 1 hour via WhatsApp. AutoSpa Bahrain W.L.L., Budaiya.',
+    'Book ceramic coating, PPF, window tinting or full car detailing in Bahrain online. Free vehicle collection from Manama, Riffa, Seef & Budaiya. Confirmed on WhatsApp in 1 hour. No upfront payment.',
   alternates: { canonical: `${BUSINESS.url}/book` },
   openGraph: {
-    title: 'Book Car Detailing in Bahrain — AutoSpa Bahrain',
+    title: 'Book Car Detailing Bahrain — Free Collection | AutoSpa Bahrain',
     description:
-      'Reserve your ceramic coating, PPF or luxury car detailing online. AutoSpa Bahrain W.L.L., Budaiya — serving all of Bahrain.',
+      'Book your ceramic coating, PPF or luxury detailing online. Free collection from anywhere in Bahrain. AutoSpa Bahrain, Budaiya — WhatsApp confirmation within 1 hour.',
     url: `${BUSINESS.url}/book`,
   },
 }

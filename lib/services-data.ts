@@ -38,9 +38,9 @@ export const SERVICES_DATA: ServiceData[] = [
     name: '9H Ceramic Coating',
     tagline: 'SiO₂ Nano-Ceramic — 2+ Year Protection',
     heroImage: '/autospa-bahrain-ceramic-coating-lexus-lx-maqaba-budaiya.webp',
-    metaTitle: '9H Ceramic Coating Bahrain | AutoSpa Bahrain, Budaiya',
+    metaTitle: 'Ceramic Coating Bahrain | 9H Nano Ceramic from BHD 150 — AutoSpa Budaiya',
     metaDescription:
-      'Professional 9H SiO₂ ceramic coating in Bahrain from BHD 150. UV protection, hydrophobic finish, 2+ year longevity. Authorized detailer serving Budaiya, Saar, Seef & all of Bahrain.',
+      'Best ceramic coating in Bahrain from BHD 150. Professional 9H SiO₂ nano ceramic — 2+ year UV protection & hydrophobic self-cleaning finish. AutoSpa Bahrain, Budaiya. Free collection from Manama, Riffa & Seef.',
     intro:
       'A 9H ceramic coating is a nano-scale silicon dioxide (SiO₂) liquid polymer that bonds chemically to your vehicle\'s factory clear coat, forming a permanent protective shell rated 9H on the pencil hardness scale. Once cured, it delivers a hydrophobic, self-cleaning surface that repels water, sand, and contaminants while blocking up to 99% of UV radiation from degrading your paint. Unlike a wax or sealant that sits on top of the paint and wears off within months, a professionally applied ceramic coating integrates into the clear coat and lasts two or more years under Bahrain\'s extreme conditions.',
     whyBahrain:
@@ -103,6 +103,10 @@ export const SERVICES_DATA: ServiceData[] = [
         q: 'What should I do to maintain a ceramic-coated car in Bahrain?',
         a: 'Wash the car every 1–2 weeks to prevent sand and mineral deposits from bonding to the coating. Always use a pH-neutral car shampoo (we recommend Zymöl Auto Wash). Never use automated brush car washes — the stiff bristles will abrade the coating. For stubborn water spots left by Bahrain\'s desalinated water, use a dedicated ceramic coating maintenance spray. We are happy to advise on specific products when you collect your vehicle.',
       },
+      {
+        q: 'What is nano ceramic coating and is it different from regular ceramic coating?',
+        a: 'Nano ceramic coating and ceramic coating refer to the same technology — the "nano" prefix describes the nanoscale silicon dioxide (SiO₂) particles that form the protective layer. At AutoSpa Bahrain, our 9H ceramic coating is a professional-grade nano ceramic product, meaning the SiO₂ particles are engineered at nanometre scale to bond chemically at a molecular level with your car\'s clear coat. Consumer-grade sprays marketed as "nano ceramic" typically contain a much lower concentration of SiO₂ and do not achieve the same hardness, durability, or bond strength as a professionally applied coating. If you are searching for nano ceramic coating in Bahrain, our 9H product is what you are looking for.',
+      },
     ],
     relatedSlugs: ['paint-protection-film-bahrain', 'full-showroom-detail-bahrain', 'paint-correction-bahrain'],
     badge: 'Most Popular',
@@ -113,9 +117,9 @@ export const SERVICES_DATA: ServiceData[] = [
     name: 'Paint Protection Film (PPF)',
     tagline: 'Self-Healing Urethane — Full or Partial Car',
     heroImage: '/autospa-bahrain-paint-protection-film-ppf-land-cruiser-defender-maqaba.webp',
-    metaTitle: 'Paint Protection Film PPF Bahrain | AutoSpa Bahrain Budaiya',
+    metaTitle: 'PPF Bahrain | Paint Protection Film from BHD 120 — AutoSpa Budaiya',
     metaDescription:
-      'Premium PPF installation in Bahrain from BHD 120. Self-healing urethane film protects against stone chips, road debris & Bahrain UV. Full or partial car, free collection across Bahrain.',
+      'Best PPF installation in Bahrain from BHD 120. Self-healing paint protection film against stone chips, road debris & UV. Full or partial car. Free collection from Manama, Riffa & Seef. AutoSpa Bahrain.',
     intro:
       'Paint Protection Film (PPF) is a clear, optically transparent thermoplastic urethane film professionally cut and applied to your vehicle\'s exterior panels to act as a physical barrier against stone chips, road debris, scratches, and UV damage. Modern PPF features a self-healing top coat — minor surface scratches and swirl marks disappear with exposure to heat (from sunlight or warm water), restoring the film to an optically clear finish. PPF can be applied to the full vehicle or strategically to the highest-impact zones: front bumper, bonnet leading edge, door cups, door edges, and rocker panels.',
     whyBahrain:
@@ -205,6 +209,10 @@ export const SERVICES_DATA: ServiceData[] = [
         q: 'How do I care for a PPF-protected car in Bahrain?',
         a: 'For the first 7 days after installation, avoid washing the vehicle and keep it away from heavy rain to allow the film to fully bond. Thereafter, wash normally with a pH-neutral shampoo. Avoid pressure washing directly at film edges, which can cause edge lifting over time. For matte PPF, never use gloss-enhancing spray waxes or sealants — they will create shiny spots on the matte surface. Annual inspections are recommended to check edge adhesion.',
       },
+      {
+        q: 'Where can I get PPF installed near me in Bahrain?',
+        a: 'AutoSpa Bahrain is the leading PPF installation workshop in Bahrain, based in Budaiya on the Budaiya Highway — conveniently accessible from Saar (5 km), Seef (15 km), Manama (20 km), Riffa (25 km), and Hamala (8 km). We offer free vehicle collection from all areas across Bahrain, so you do not need to drive to us — we come to you, complete the PPF installation at our Budaiya workshop, and deliver your car back when it is ready. WhatsApp us on +973 1759 5971 to arrange collection.',
+      },
     ],
     relatedSlugs: ['ceramic-coating-bahrain', 'full-showroom-detail-bahrain', 'paint-correction-bahrain'],
     badge: 'Premium',
@@ -290,9 +298,9 @@ export const SERVICES_DATA: ServiceData[] = [
     name: 'Interior Steam & Leather Care',
     tagline: 'High-Temp Steam Sanitisation & Leather Conditioning',
     heroImage: '/autospa-bahrain-car-detailing-lexus-es-maqaba-budaiya.webp',
-    metaTitle: 'Interior Car Detailing Bahrain | Steam Clean & Leather Care, Budaiya',
+    metaTitle: 'Interior Car Detailing Bahrain | Steam Clean & Leather Care from BHD 55',
     metaDescription:
-      'Professional interior steam detailing in Bahrain from BHD 55. High-temperature steam kills bacteria, eliminates odours. Leather conditioning for luxury cabins. All areas served.',
+      'Deep interior car detailing in Bahrain from BHD 55. Steam sanitisation kills bacteria & removes embedded sand. Leather conditioning for luxury cars. Free collection from Manama, Riffa & Seef. AutoSpa Bahrain.',
     intro:
       'Interior steam detailing uses commercial-grade steam generators producing dry steam at 150–180 °C to deep-clean all cabin surfaces — fabric, leather, plastics, carpets, door cards, and vents — without the use of harsh chemical solvents. At these temperatures, steam kills 99.9% of bacteria, dust mites, and allergens on contact, simultaneously dissolving grease, food residue, and sand embedded in fibres. For leather interiors, we follow steam cleaning with a multi-stage conditioning treatment using pH-balanced leather cleaner, colour-safe leather conditioner, and a UV-protective leather sealant to nourish, restore suppleness, and prevent cracking.',
     whyBahrain:
@@ -354,6 +362,10 @@ export const SERVICES_DATA: ServiceData[] = [
       {
         q: 'How long does the interior stay clean after a steam detail in Bahrain?',
         a: 'In normal use, a full interior steam detail in Bahrain will look noticeably better for 2–4 months, depending on usage. Vehicles with children or pets, or those driven daily in dusty conditions, will require more frequent treatment. We typically see clients booking interior details every 3–6 months. The leather conditioning benefit lasts 3–4 months before the leather begins to dry again in Bahrain\'s heat.',
+      },
+      {
+        q: 'Where can I get my car interior professionally cleaned near me in Bahrain?',
+        a: 'AutoSpa Bahrain offers professional interior car detailing from our workshop in Budaiya, and we collect vehicles from all areas of Bahrain including Manama, Riffa, Seef, Saar, Hamala, and Isa Town. Interior steam clean and leather care is typically completed in 3–5 hours, so we can often collect in the morning and return your car the same afternoon. WhatsApp us on +973 1759 5971 to arrange collection from your area.',
       },
     ],
     relatedSlugs: ['full-showroom-detail-bahrain', 'zymol-luxury-detailing-bahrain', 'ceramic-coating-bahrain'],
@@ -517,11 +529,11 @@ export const SERVICES_DATA: ServiceData[] = [
     name: 'Window Tinting',
     tagline: 'UV & Heat Rejection Film',
     heroImage: '/autospa-bahrain-car-detailing-lexus-es-maqaba-budaiya.webp',
-    metaTitle: 'Window Tinting Bahrain | UV & Heat Rejection — AutoSpa Bahrain Budaiya',
+    metaTitle: 'Window Tinting Bahrain | Car Tinting from BHD 60 — AutoSpa Budaiya',
     metaDescription:
-      'Professional window tinting in Bahrain from BHD 60. High-performance UV and heat rejection films installed at our Budaiya workshop. Legal VLT compliance. Book on WhatsApp +973 1759 5971.',
+      'Professional car window tinting in Bahrain from BHD 60. Ceramic, carbon & UV heat rejection films. Legal VLT compliance. Serving Manama, Budaiya, Riffa & Seef. AutoSpa Bahrain — WhatsApp to book today.',
     intro:
-      "Window tinting is one of the most practical investments a Bahrain driver can make. AutoSpa Bahrain installs high-performance window films that reject up to 99% of UV radiation and significantly reduce solar heat gain inside the cabin — lowering interior temperatures, protecting leather and dashboard surfaces, and reducing strain on the air conditioning system. We stock a range of films from entry-level dyed options to premium ceramic and nano-ceramic films, all cut precisely using digital templating for a factory-fit finish with no bubbles, lifting edges, or distortion.",
+      "Car window tinting is one of the most practical investments a Bahrain driver can make. AutoSpa Bahrain installs high-performance window tint films that reject up to 99% of UV radiation and significantly reduce solar heat gain inside the cabin — lowering interior temperatures by up to 15 °C, protecting leather and dashboard surfaces from UV fading, and reducing strain on the air conditioning system. Whether you need a basic dyed tint for privacy or a premium ceramic window tint for maximum heat rejection, we cut all films precisely using digital templating for a factory-fit finish with no bubbles, lifting edges, or distortion. We serve all of Bahrain including Manama, Riffa, Seef, Hamala, Saar and Budaiya.",
     whyBahrain:
       "Bahrain's summer sun is extreme — UV Index 11–12 is routine, and cabin temperatures in a parked car regularly exceed 70–80 °C without protection. This heat degrades leather, fades fabric, dries out plastic trim, and makes every entry into an unshaded vehicle uncomfortable. Beyond comfort, prolonged UV exposure is a major cause of dashboard cracking and interior fading in Bahrain's vehicles. A quality ceramic window film addresses all of these: it rejects heat, blocks UV, improves cabin comfort substantially, and prolongs the life of interior surfaces. We install all films in compliance with Bahrain's legal visible light transmission (VLT) requirements, ensuring your vehicle passes inspection.",
     process: [
@@ -558,6 +570,14 @@ export const SERVICES_DATA: ServiceData[] = [
       {
         q: 'How long does window tint last in Bahrain\'s heat?',
         a: 'Quality ceramic and carbon films last 10+ years under Bahrain\'s conditions. Entry-level dyed films typically show fading and purple discolouration within 2–3 years due to UV degradation. If you are investing in long-term protection, the additional cost of ceramic film pays for itself in longevity and performance.',
+      },
+      {
+        q: 'Where can I get my car windows tinted near me in Bahrain?',
+        a: 'AutoSpa Bahrain\'s window tinting workshop is in Budaiya, accessible from across Bahrain. We offer free vehicle collection from Manama, Riffa, Seef, Saar, Hamala, and other areas — so you do not need to come to us. Our technicians use digital template cutting for exact-fit results on any make or model. Tinting is typically completed within a single day. WhatsApp us on +973 1759 5971 to book or arrange collection.',
+      },
+      {
+        q: 'What is the best window tint film for Bahrain\'s climate?',
+        a: 'For Bahrain\'s extreme heat and UV, we recommend ceramic or nano-ceramic window tint films as the best long-term investment. Ceramic tints reject significantly more solar heat than dyed or metalised films, do not interfere with GPS or mobile signals, and do not fade or turn purple over time. Carbon film is a mid-tier option offering good heat rejection at a lower price point than ceramic. For the front windscreen, we use UV-clear ceramic film that meets Bahrain\'s VLT legal requirements while still blocking heat and UV radiation.',
       },
     ],
     relatedSlugs: ['ceramic-coating-bahrain', 'paint-protection-film-bahrain', 'interior-detailing-bahrain'],
