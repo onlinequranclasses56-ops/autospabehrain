@@ -282,4 +282,124 @@ export const FAQ_ITEMS = [
     answer:
       'Surface-level detailing — a thorough hand wash, interior vacuum, and spray wax — can be done at home with care. Paint correction and ceramic coating are significantly more technical: machine polishers require training to avoid burning through the clear coat, defects are only visible under high-intensity inspection lights, and ceramic coatings must be applied in controlled temperature and humidity conditions. A professional auto spa like AutoSpa Bahrain has the equipment, trained technicians, and workshop conditions to deliver correct, lasting results.',
   },
+  {
+    question: 'How often should I detail my car in Bahrain?',
+    answer:
+      'In Bahrain\'s climate, a full detail — including paint correction and ceramic coating — is recommended once every 12–24 months depending on how the vehicle is stored and driven. Ceramic-coated vehicles should have a maintenance detail (decontamination wash, coating top-up inspection) every 6–12 months. For daily drivers exposed to sand, highway debris, and intense sun, an annual full detail preserves the paint and extends ceramic coating life significantly. Hand washing every 1–2 weeks is the essential ongoing maintenance between details.',
+  },
+  {
+    question: 'How do I maintain a ceramic coating?',
+    answer:
+      'To maintain a ceramic coating properly: (1) hand wash with a pH-neutral shampoo — never an automatic car wash with rotating brushes; (2) use a clean microfibre wash mitt and the two-bucket method to avoid dragging grit across the coating; (3) avoid washing in direct sunlight or on hot panels; (4) apply a ceramic coating booster or spray topper every 3–6 months to refresh hydrophobic performance; (5) never apply wax or sealant on top of a ceramic coating — it clogs the coating\'s surface chemistry. AutoSpa Bahrain offers ceramic coating maintenance washes for vehicles we have coated.',
+  },
+  {
+    question: 'How soon after ceramic coating can I wash my car?',
+    answer:
+      'After a professional 9H ceramic coating application, wait a minimum of 7 days before the first wash — and avoid rain, dew, or direct water contact during this curing period. The coating bonds chemically to the clear coat during this window; water contact before full cure causes water marks that become permanent. AutoSpa Bahrain advises keeping the vehicle garaged or under cover for the first week post-application. After 7 days, hand wash only — no automatic car washes for the lifetime of the coating.',
+  },
+  {
+    question: 'What is the difference between ceramic coating and wax?',
+    answer:
+      'Ceramic coating is a liquid polymer that bonds permanently to the clear coat, creating a rigid glass-like protective layer with 9H hardness. It lasts 2–4 years and provides UV resistance, chemical resistance, and a hydrophobic surface. Car wax is a natural or synthetic coating that sits on top of the paint without bonding — it wears off in 1–3 months and offers minimal UV or chemical protection. In Bahrain\'s extreme UV and heat, wax degrades within weeks in summer. Ceramic coating is the only long-term paint protection option suited to Bahrain\'s climate.',
+  },
+  {
+    question: 'Can ceramic coating be removed?',
+    answer:
+      'Yes, but it requires machine polishing with a cutting compound — the same process used for paint correction. Ceramic coating cannot be removed by washing or chemical strippers alone because it bonds chemically to the clear coat. At AutoSpa Bahrain, if a ceramic coating has degraded, failed, or needs to be replaced, we machine polish the surface to remove the old coating before applying a fresh layer. This is one reason why professional application matters: improperly applied coatings that develop high spots or smears are difficult and costly to correct later.',
+  },
+  {
+    question: 'What is graphene coating and is it better than ceramic coating?',
+    answer:
+      'Graphene coating is an evolution of ceramic (SiO₂) coating that incorporates graphene oxide particles — a carbon-based material that conducts heat and adds flexibility to the coating layer. Graphene coatings typically offer better water spot resistance (fewer mineral deposits), lower surface temperature under sunlight, and improved durability compared to standard ceramic. In Bahrain\'s context — intense UV, hard water, and extreme heat — graphene\'s superior heat dissipation and water spot resistance make it a meaningful upgrade for vehicles stored outdoors. WhatsApp AutoSpa Bahrain on +973 1759 5971 to discuss graphene coating availability and pricing.',
+  },
+  {
+    question: 'What is self-healing PPF?',
+    answer:
+      'Self-healing paint protection film (PPF) contains a top coat layer made from elastomeric polymer that recovers from light scratches, swirl marks, and minor abrasion when exposed to heat — either sunlight or warm water. A scratch that would remain visible on standard PPF will disappear within minutes on self-healing film once the panel warms up. All PPF installed at AutoSpa Bahrain uses self-healing film with a high-clarity optically transparent finish, ensuring the paint colour and gloss beneath are not altered.',
+  },
+  {
+    question: 'How long does PPF last in Bahrain?',
+    answer:
+      'High-quality paint protection film (PPF) lasts 7–10 years under normal conditions. In Bahrain\'s climate — sustained UV above BHD 6 UVI daily, ambient temperatures above 40°C in summer, and salt-laden coastal humidity — premium PPF may show yellowing or edge lifting at 6–8 years if not maintained correctly. AutoSpa Bahrain installs PPF with UV-stabilised top coats specifically rated for high-temperature, high-UV markets. Correct installation with sealed edges and no contamination during fitting is the primary factor in longevity.',
+  },
+  {
+    question: 'What is the difference between PPF and vinyl wrap?',
+    answer:
+      'PPF (paint protection film) is a thick, optically clear urethane film designed to protect the original paint from stone chips, scratches, and UV damage while remaining invisible. Vinyl wrap is a thinner, pigmented or textured film applied to change the colour or finish of the vehicle — gloss, matte, satin, carbon fibre. PPF protects; vinyl wraps transform appearance. PPF cannot change colour; vinyl wrap offers no meaningful stone chip protection. Some clients combine both: PPF on high-impact zones (bonnet, bumper), then a colour vinyl wrap over the full car.',
+  },
+  {
+    question: 'What is matte PPF?',
+    answer:
+      'Matte PPF is a paint protection film with a low-gloss, satin or flat finish that converts a gloss paint surface to a matte appearance while providing full stone chip and UV protection. It is the most popular way to achieve a matte look without a respray, and it is fully reversible — the film can be removed without damaging the original gloss paint underneath. AutoSpa Bahrain installs matte PPF for clients wanting a matte black, matte grey, or satin finish on factory gloss paint. It also self-heals from light scratches in heat.',
+  },
+  {
+    question: 'What is the legal window tint percentage in Bahrain?',
+    answer:
+      'In Bahrain, the General Directorate of Traffic requires a minimum Visible Light Transmission (VLT) of 30% for front side windows and 30% for the windscreen (excluding the factory-applied UV band at the top). Rear side windows and the rear windscreen have no legal minimum VLT in Bahrain, allowing darker tints on those panels. AutoSpa Bahrain installs all window tint films in strict compliance with Bahrain legal VLT limits, ensuring no risk of a traffic violation. We advise on the darkest compliant option for each window position.',
+  },
+  {
+    question: 'How long does window tinting last?',
+    answer:
+      'Professional-grade window tinting installed at AutoSpa Bahrain lasts 5–10 years under Bahrain\'s conditions. Ceramic window tint film lasts longest — the carbon and ceramic layers resist UV-induced fading, bubbling, and purple discolouration. Budget dyed films degrade faster in Bahrain\'s intense UV, typically showing fading or bubbling within 2–3 years. Signs that tinting needs replacing include visible bubbling, colour shift to purple, or reduced heat rejection performance. AutoSpa Bahrain installs ceramic and carbon tint films backed by a manufacturer warranty.',
+  },
+  {
+    question: 'What is the difference between ceramic, carbon, and dyed window tint?',
+    answer:
+      'Dyed window tint uses layers of dye to absorb sunlight — the cheapest option but least effective at rejecting heat and prone to fading and purpling within 2–3 years under Bahrain\'s UV. Carbon tint uses carbon particles that block infrared heat more effectively, do not fade, and do not interfere with mobile signals or GPS. Ceramic tint uses non-metallic ceramic particles to reject up to 50% of infrared heat, block 99% of UV, and maintain signal clarity — the highest performance option. AutoSpa Bahrain installs ceramic and carbon films for Bahrain\'s climate conditions.',
+  },
+  {
+    question: 'What causes swirl marks on car paint?',
+    answer:
+      'Swirl marks are fine, circular scratches in the clear coat caused by abrasive contact during washing or polishing. The most common causes are: (1) washing with a dirty mitt or sponge that drags grit across the paint; (2) automatic car wash brushes picking up particles from other vehicles; (3) single-bucket washing without separating rinse and wash water; (4) drying with a household towel or chamois that traps particles; (5) wiping dust off a dry car. In Bahrain, fine windblown sand makes swirl marks a particularly fast-developing problem. Paint correction at AutoSpa Bahrain removes swirl marks permanently.',
+  },
+  {
+    question: 'How do I remove water spots from my car?',
+    answer:
+      'Water spots in Bahrain are caused by hard water mineral deposits (calcium and magnesium) bonding to the paint as water evaporates in the heat. Light water spots can be removed with a dedicated water spot remover or diluted white vinegar on a microfibre cloth. Etched water spots — where mineral deposits have chemically bonded into the clear coat — require machine polishing with a cutting compound to remove. AutoSpa Bahrain regularly treats Bahrain vehicles with severe water spot etching using multi-stage paint correction. A ceramic coating applied afterwards provides a hydrophobic surface that prevents future water spot bonding.',
+  },
+  {
+    question: 'How do I know if my car needs paint correction?',
+    answer:
+      'Your car needs paint correction if you see any of the following: (1) swirl marks visible in direct sunlight or under artificial light — circular scratches that dull the gloss; (2) water spots or mineral etch marks that do not wash off; (3) oxidation — a chalky, milky, or dull appearance on the clear coat; (4) random deep scratches from car park incidents; (5) faded or uneven paint colour on panels exposed to sun. In Bahrain, most vehicles over two years old have visible swirl marks from automatic car washes and sand abrasion. Send us photos on WhatsApp +973 1759 5971 for a free assessment.',
+  },
+  {
+    question: 'What is a clay bar treatment and why is it used?',
+    answer:
+      'A clay bar is a detailing tool made from synthetic polymer that removes bonded surface contamination that washing alone cannot remove — industrial fallout, iron particles from brake dust, overspray, and embedded road tar. The clay bar is lubricated across the paint surface and physically pulls contaminants from the pores of the clear coat, leaving the paint completely smooth to the touch. Clay bar decontamination is a mandatory preparation step before paint correction, ceramic coating, or PPF installation at AutoSpa Bahrain — contamination left under a coating causes premature adhesion failure.',
+  },
+  {
+    question: 'What is a decontamination wash?',
+    answer:
+      'A decontamination wash removes chemical and physical contamination that standard shampoo cannot dissolve. At AutoSpa Bahrain it involves three stages: (1) iron fallout remover — a pH-reactive chemical that dissolves iron particles embedded in the clear coat (it turns purple on contact with iron); (2) tar and adhesive remover — dissolves road tar, bitumen spots, and adhesive residue; (3) clay bar — physically removes any remaining bonded contamination. This process is essential before paint correction, ceramic coating, or PPF installation and is included as standard in all AutoSpa Bahrain full detail bookings.',
+  },
+  {
+    question: 'How much does car detailing cost in Bahrain?',
+    answer:
+      'Car detailing prices in Bahrain at AutoSpa Bahrain: interior steam clean and leather care from BHD 55; full exterior hand wash and machine polish from BHD 80 (saloon) / BHD 100 (SUV); full showroom detail (exterior correction + interior deep clean) from BHD 150; 9H ceramic coating from BHD 150 (including paint correction prep); full-car PPF installation from BHD 400 depending on vehicle and film grade; window tinting from BHD 60 (saloon). Free vehicle collection from across Bahrain is included on all bookings. WhatsApp +973 1759 5971 for a precise quote for your vehicle.',
+  },
+  {
+    question: 'What is the best way to protect a new car in Bahrain?',
+    answer:
+      'The best protection for a new car in Bahrain is paint protection film (PPF) on high-impact zones — bonnet, front bumper, wing mirrors, and door edges — combined with a 9H ceramic coating over the full vehicle. This combination protects against stone chips, road debris, UV degradation, sand abrasion, and chemical fallout simultaneously. Ideally, this should be done within the first month of ownership before any washing or sun exposure causes clear coat damage. AutoSpa Bahrain offers a new car protection package: decontamination, PPF on front panels, and full-car ceramic coating. WhatsApp us on +973 1759 5971 for a tailored quote.',
+  },
+  {
+    question: 'How long does vinyl wrap last in Bahrain?',
+    answer:
+      'Premium cast vinyl wrap lasts 4–7 years under normal conditions. In Bahrain, sustained UV at 6–7 UVI daily and ambient temperatures above 45°C in summer reduce the expected lifespan to 3–5 years for standard vinyl, and up to 5–7 years for UV-stabilised premium cast films. Matte and satin finishes fade faster than gloss. Correct installation with sealed edges, no air pockets, and minimal panel heat above 80°C during application is critical for longevity. AutoSpa Bahrain uses only premium cast vinyl films rated for high-UV, high-heat markets.',
+  },
+  {
+    question: 'Can vinyl wrapping damage car paint?',
+    answer:
+      'Vinyl wrapping does not damage factory paint when installed and removed correctly. The pressure-sensitive adhesive used on quality cast films is designed to release cleanly from original paintwork for up to 7 years. Damage occurs when: (1) the wrap is left on beyond its rated lifespan and the adhesive degrades; (2) low-quality calendar vinyl film is used — the adhesive is more aggressive; (3) the wrap is removed by pulling at sharp angles rather than at 45°. AutoSpa Bahrain uses premium cast films specifically engineered for safe removal. We do not recommend wrapping over resprayed panels that have not fully cured.',
+  },
+  {
+    question: 'Can headlights be restored at AutoSpa Bahrain?',
+    answer:
+      'Yes — AutoSpa Bahrain offers professional headlight restoration for yellowed, hazy, or oxidised headlight lenses. In Bahrain, polycarbonate headlight lenses typically begin to yellow and cloud within 2–4 years due to UV radiation and heat breaking down the factory UV-protective lacquer. Our restoration process involves wet sanding through progressive grits, machine polishing to optical clarity, and applying a UV-resistant protective coating to prevent rapid re-oxidation. Restored headlights improve both appearance and night-time visibility. WhatsApp us on +973 1759 5971 for pricing.',
+  },
+  {
+    question: 'How often should I wash my car in Bahrain?',
+    answer:
+      'In Bahrain, washing every 7–14 days is recommended for most vehicles. Bahrain\'s environment deposits sand, construction dust, brake iron particles, and salt-laden humidity on paintwork continuously — leaving contamination on the paint too long allows it to bond chemically into the clear coat and cause etching. For ceramic-coated vehicles, weekly washing with a pH-neutral shampoo maintains the hydrophobic layer at peak performance. Avoid washing in direct midday sun: early morning (before 9 AM) or evening (after 6 PM in summer) prevents water spotting from rapid evaporation.',
+  },
 ] as const
